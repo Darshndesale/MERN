@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 1</title>
+</head>
+<body style="background-color: darkslategrey;">
+    <h2 style="font-family: 'Courier New', Courier, monospace;">Event Registration</h2>
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <br>
+        <br>
+
+        <label for="email">Email ID</label>
+        <input type="text" id="email" name="email">
+
+        <br>
+        <br>
+
+        <label for="telephone">Telephone</label>
+        <input type="tel" id="telephone" name="tel">
+
+        <br>
+        <br>
+
+        <label for="occu">occupation</label>
+        <select name="occupation" id="occu">
+            <option value="student">Student</option>
+            <option value="profestional">profestional</option>
+            <option value="othor">Othor</option>
+        </select>
+
+        <br>
+        <br>
+
+        <fieldset>
+            <legend>Type of Interest:</legend>
+
+            <input type="checkbox" name="chek" id="checkbox1">
+            <label for="checkbox1">HTML</label>
+
+            <br>
+            <br>
+
+            <input type="checkbox" name="chek" id="checkbox2">
+            <label for="checkbox2">Css</label>
+
+            
+            <br>
+            <br>
+
+            <input type="checkbox" name="chek" id="checkbox3">
+            <label for="checkbox3">java script</label>
+        </fieldset>
+        <br>
+        <label for="textarea1">Comments:</label><br>
+        <textarea name="text" id="textarea1" cols="30" rows="10"></textarea>
+
+        <button>Result</button>
+    </form>
+</body>
+</html>
