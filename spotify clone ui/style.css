@@ -36,10 +36,39 @@ nav ul{
 }
 
 nav ul li{
-    padding: 15px;
+    padding: 25px;
+   
 }
 
 div h1{
     display: flex;
    
+}
+
+.container{
+    min-height: 75vh;
+
+}
+
+#myprogresbar{
+    width: 80vh;
+    text-align: center;
+}
+.bottom{
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    bottom: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icons{
+    margin-top: 14px;
+}
+.icons i{
+    cursor: pointer;
 }
