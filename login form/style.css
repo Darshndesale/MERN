@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.minform{
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    height: 350px;
+}
+
+/* h1 */
+.heading{
+    text-align: center;
+    padding: 10px 10px;
+    border-bottom: 1px solid silver;
+}
+
+/* lable for email  */
+form .text1{        
+    /* text-align: center; */
+    padding: 10px 10px;
+    border-bottom: 1px solid silver;
+}
+
+/* lable for Password  */
+form .text2{
+    /* text-align: center; */
+    position: relative;
+    padding: 10px 10px;
+    border-bottom: 2px solid #adadad;
+
+}
+
+/* email ka input box */
+.text1 input{
+    width: 96%;
+    padding: 0 5px;
+    height: 35px;
+    font-size: 16px;
+    background: none;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+.text2 input{
+    width: 96%;
+    padding: 0 5px;
+    height: 35px;
+    font-size: 16px;
+    background: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+
+.forgot{
+    text-align: left;
+    padding: 5px 10px;
+    border-bottom: 1px solid silver;
+    font-size: 15px;
+} 
+
+/* button */
+.button #Login{
+    text-align: center;
+    padding: 5px 10px;
+    size: 20%;
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    width: 90%;
+    font-size: 20px;
+    border-radius: 10px;
+    height: 50px;
+    cursor: pointer;
+}
+
