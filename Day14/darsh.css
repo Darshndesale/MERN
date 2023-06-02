@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-style: italic;
+    font-size: 20px;
+    margin: 20px 20px;
+    font-family: 'Ubuntu', sans-serif;
+
+    /* it coverts to dark the font  handle the thickness*/
+    font-weight: 900;
+
+    /* minimize and maximize the gap between the text */
+    line-height: 50px;
+
+    
+}
+
+#firstpara{
+    background-color: yellow;
+}
+
+#secondpara{
+    background-color: rgb(140, 88, 224);
+}
+
+#thirdpara{
+    background-color: rgba(209, 62, 62, 1);
+}
+
+.paraclass{
+    background-color: #ef5716;
+    
+}
+
+.secondclass{
+   background-color: hsl(0, 100%, 50%);
+}
