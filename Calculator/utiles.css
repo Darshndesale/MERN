@@ -1,0 +1,27 @@
+.text-center {
+    text-align: center;
+  }
+  
+  /* .bg-red {
+    background-color: indianred;
+  
+  } */
+
+  .max-auto{
+    margin: auto;
+  }
+
+ .flex{
+  display: flex;
+ }
+
+ .flex-col{
+  flex-direction: column;
+ }
+
+ /* reuse the utility css clsses */
+ .item-center{
+    justify-content: center;
+    text-align: center;
+ }
+
