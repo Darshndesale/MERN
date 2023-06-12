@@ -1,0 +1,91 @@
+ /* body{
+    text-align: center;
+}
+
+div{
+    height: 30px;
+    width: 100px;
+    display: inline-block;
+    border: 2px solid black;
+
+} */
+
+/* #continer{ */
+    /* height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: row; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+
+
+    /* align-content: center; */
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+/* }  */
+
+/* #b1{
+    background-color: rgb(240, 9, 9);
+    flex-grow: 0;
+}
+
+#b2{
+    background-color: rgb(241, 183, 38);
+    height: 200px;
+    flex-grow: 2;
+}
+
+#b3{
+    background-color: rgb(129, 111, 231);
+}
+
+#b4{
+    background-color: rgb(202, 72, 139);
+}
+
+#b5{
+    background-color: rgb(18, 211, 37);
+} */
+
+.navbar{
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(17, 20, 20);
+}
+
+li{
+    list-style-type: none;
+    display: inline;
+    
+}
+
+.outerdiv{
+    height: 400px;
+    width: 400px;
+    border: 2px solid red;
+    background-color: rgb(114, 208, 208);
+    display: flex;
+    justify-content: center;
+
+    /* priority is kami than align-self */
+    align-items: flex-end;
+
+}
+
+.innerdiv{
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgb(30, 11, 11);
+    background-color: rgb(234, 190, 109);
+
+    /* higher priority */
+    align-self: flex-start;
+}

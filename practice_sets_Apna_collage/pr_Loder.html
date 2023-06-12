@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loader</title>
+    <style>
+      body{
+        background-color: bisque;
+      }
+      .loader {
+        width: 200px;
+        height: 200px;
+        border: 20px solid rgb(246, 216, 45);
+        border-top: 20px solid rgb(14, 191, 231);
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 45%;
+        animation: animation1 3s ease-in-out 0s infinite normal;
+      }
+
+      @keyframes animation1 {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- step 1 : create a div with circular shape and a thick border from one end (T B R L)-->
+    <div class="loader"></div>
+
+    <!-- step 2 : To make it spin create an animation which transform it from 0 deg to 360deg -->
+  </body>
+</html>

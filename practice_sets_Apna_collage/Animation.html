@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      div {
+        height: 50px;
+        width: 100px;
+        border-radius: 50px;
+        border: 2px solid black;
+        background-color: rgb(23, 138, 238);
+        position: absolute;
+        top: 50px;
+        left: 300px;
+        animation-name: coloranimate;
+
+        /* kiti time chalega */
+        animation-duration: 3s;
+
+        animation-timing-function: ease-in-out;
+        /* wait kitna time karega */
+        animation-delay: 1s;
+        /* kitni bar chalega */
+        animation-iteration-count: infinite;
+
+        /* animation-deirection */
+        animation-direction: normal;
+      }
+
+      /* first key  */
+      /* @keyframes coloranimate{
+            from{ 
+                background-color: aquamarine;
+            }
+            to{
+                background-color: red;
+            }
+        } */
+
+      @keyframes coloranimate {
+        from{
+          left: 500px;
+          background-color: aqua;
+          border: 0.25px solid black;
+        }
+        to{
+          left: 600px;
+          background-color: white;
+          border: none;
+        }
+      }
+      div:hover {
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Apply Animation -->
+    <div>this is text</div>
+  </body>
+</html>

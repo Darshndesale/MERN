@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* This is hover classes */
+        div{
+            position: absolute;
+            top: 120px;
+            left: 120px;
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+            border: 2px solid black;
+
+            /* -------------1-------- This transition to cjange properties of elelement */
+            /* transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: steps(3);
+            transition-delay: 1s; */
+            /* ----------stop1------- */
+
+            /* -------------2----------shortcut of 1 thats write short */
+            /* transition in short habd */
+            transition: all 2s ease-in-out;
+            /* ---------stop1 part: --------- */
+
+            /* -------------3--------transform it roatates , scale the elements */
+            /* transform: rotate(45deg); */
+
+            /* piche sote jayega x axis me */
+            /* rotate: x 40deg; */
+
+            /* Ek tarf right or left e sote jayega */
+            /* rotate: y 40deg; */
+
+            /* Z axis me circle karke apni state or position change karta he */
+            /* rotate: z 90deg; */
+
+            /* transform: scale(2,1); */
+            /* ---------------stop3------------ */
+
+            
+        }
+        div:hover{
+            height: 210px;
+            width: 210px;
+            background-color: rgb(226, 69, 2);
+            font-size: 50px;
+
+            /* scale also use in hover */
+            transform: scale(2,1);
+
+            /* in hover also roatate the element */
+            transform: rotate(360deg);
+
+            /* -----------4----------trans--late---Move in any Axis by pixel(X,Y,Z) */
+            transform: translateY(50px);
+            /* ------------stop4-------- */
+
+            /* ----------5---------skew------It stresses the element by any degree */
+            transform: skew(45deg);
+            /* --------------stop4-------- */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        this is box
+    </div>
+
+    <!-- scale properties -->
+
+</body>
+</html>
