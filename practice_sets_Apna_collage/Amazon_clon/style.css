@@ -201,6 +201,11 @@ span{
     background-color: white;
 }
 
+.box:hover{
+    padding: 12px 1px 21px 1px;
+    border: 2px solid #007185;
+}
+
 .shop-section{
     display: flex;
     /* ek row me kitne box ane chahiye fix kardo  */
@@ -235,6 +240,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .fot-panel1 a{
@@ -245,10 +251,46 @@ span{
     height: 500px;
     background-color: #323e4a;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-evenly;
+    color: white;
 }
 
-.links{
+/* Footer dives */
+
+.remove{
+    list-style: none;
     text-decoration: none;
+    margin: 20px;
+}
+
+ul a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 0px;
+    display: flex;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #dddddd;
+}
+
+.fot-panel3{
+    height: 50px;
+    background-color: #323e4a;
+    color: white;
+    border-top: 0.5px solid white;
+}
+
+.logo2{
+    background-image: url("amazon_logo.png");
+    height: 50px;
+    width: 100px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.fot-panel3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
