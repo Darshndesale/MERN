@@ -1,0 +1,22 @@
+button class
+--> 
+<!-- <button class="btn primary">
+    Technology
+</button> -->
+
+margine class
+--> 
+    <!-- my-4 -->
+
+flex classe
+--->
+<!-- <d-flex></d-flex>
+justify-content-center align-items-center -->
+
+arange the elements or blog image front and para back --->reverse of blog
+--->
+    <!-- order-md-1 OR 2 -->
+
+To make responsive image 
+--->
+<!-- class="img-fluid" -->
