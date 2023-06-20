@@ -167,13 +167,15 @@
     cursor: pointer;
 }
 .sec-options{
+    color: white;
+    font-weight: 500;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 200px;
-    width: 90%;
-    background-color: #42368a;
-    margin: 25px 0px 0px 0px;
+    width: 85%;
+    /* background-color: #42368a; */
+    margin-top: 25px;
 }
 
 /* common design for al options-- */
@@ -183,6 +185,10 @@
     justify-content: space-evenly;
     /* align-items: center; */
     height: 100%;
+}
+
+.op-design:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
 .go-link{
