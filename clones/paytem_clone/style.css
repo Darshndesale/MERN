@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    /* padding: 0; */
+    font-family: 'Ubuntu', sans-serif;
+    border: border-box;
+}
+
+.navbar{
+    display: flex;
+    height: 110px;
+    width: 100%;
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+
+.nav-logo{
+    height: 55px;
+    width: 200px;
+}
+
+.logo{
+    background-image: url(paytm_logo.png);
+    height: 55px;
+    width: 180px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.nav-headop{
+    height: 1rem;
+    width: 70%;
+    /* background-color: aquamarine; */
+}
+
+.font-style{
+    font-size: 17px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* sign style-- */
+.sign-style{
+    background: #00baf2;
+    padding: 7px 11px 9px 17px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    margin: 1px;
+    display: flex;
+}
+.span{
+    margin: 0px 5px 0px 0px;
+}
+
+.sign-style:hover{
+    background-color: #42368a;
+}
+.options{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+}
+
+/* panel is start-- */
+
+.panel .panel-para{
+    height: 50px;
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.panel-samile{
+    margin: 0px 5px;
+}
+
+/* hero section is start-- */
+
+/* 1-- Download section-- */
+.download-section{
+    display: flex;
+    height: 600px;
+    width: 100%;
+    /* background-color: #00baf2; */
+}
+
+.pay-logo{
+    background-image: url(pay_logo.png);
+    height: 80px;
+    width: 80px;
+    margin: 20px 0px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.down-sec-left{
+    display: flex;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    height: 400px;
+    width: 25%;
+    margin: 90px 50px 0px 100px;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.sec-dow-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    width: 55%;
+    height: 30px;
+    font-size: 0.85rem;
+}
+
+.sec-dow-btn:hover{
+    background-color: white;
+    color: rgb(18, 17, 17);
+    border: 1px solid black;
+}
+
+/* right section-- */
+.down-sec-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.down-img{
+    position: absolute;
+    display: flex;
+    background-image: url(phone_img.png);
+    height: 450px;
+    width: 450px;
+    background-size: cover;
+    cursor: pointer;
+    right: 0;
+    top: 250px;
+}
+
+/* pay and bill section  */
+.reacharge-bill-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-color: #00baf2;
+}
+.img-style{
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    cursor: pointer;
+}
+.sec-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 90%;
+    background-color: #42368a;
+    margin: 25px 0px 0px 0px;
+}
+
+/* common design for al options-- */
+.op-design{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    height: 100%;
+}
+
+.go-link{
+    width: 50%;
+}
+
