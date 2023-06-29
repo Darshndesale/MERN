@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 40%;
+    height: 250px;
+    margin: 2rem auto;
+    border: 2px solid black;
+    padding: 1rem;
+    /* background-color: aquamarine; */
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.forms{
+    width: 55%;
+    margin: 0 0px 0px 50px;
+   
+}
+
+.gaps{
+    margin: 0.4rem 0;
+}
+
+.error{
+    width: 54%;
+    color: red;
+    background-color: rgb(255 147 147);
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.task-list{
+    margin: 1.85rem 0px;
+    list-style: none;
+   
+}
+
+.btn-cleare{
+    text-align: center;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h3>Task Manerger</h3>
+      <div class="forms">
+        <p class="error">Please enter the task</p>
+        <div class="add-section gaps">
+          <input type="text" id="input-task" placeholder="Enter a task" />
+          <button id="add-task">Add Task</button>
+        </div>
+        <div class="search-section gaps">
+          <input type="text" placeholder="Search youe task" />
+          <button id="Search-task">Search</button>
+        </div>
+
+        <!-- create the ul for adding the task using ingect the task= -->
+        <ul class="task-list">
+          <!-- <li class="task">
+            <input type="text" value="Build simple project" disabled/><button id="delete">Delete</button
+            ><button id="edit">Edit</button>
+          </li> -->
+        </ul>
+
+        
+          <button class="btn-cleare" style="margin-top: 15px;">Cleare all</button>
+        
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
