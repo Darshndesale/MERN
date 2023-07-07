@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // window.console.log(window)
+      // console.log(document.body)
+
+      // // we can prowide the body to style of every css properties
+      // document.body.style.background = 'red'
+
+      //bom
+      // location.href = 'https://codewithHarry.com'
+
+      // Exersize 6
+
+      //function  for the age cheker
+      const agecheck = (a) => {
+        return a >= 18 ? true : false;
+      };
+
+      //qna 1
+      //   let isrepeat = true;
+      //   while (isrepeat) {
+      //     let age = prompt("Enter youre age");
+
+      //     if (age < 0) {
+      //       console.error("you enter the negative age, not vlaid Try agin");
+      //       break;
+      //     }
+      //     if (agecheck(age)) {
+      //       alert("Yes you can drive");
+      //     } else {
+      //       alert("No you can't be drive");
+      //     }
+
+      //     isrepeat = confirm("You can check again");
+      //   }
+
+      //qna 4
+      //   let num = prompt("Enter the number")
+
+      //   if(num > 4)
+      //   {
+      //     location.href = 'https://google.com'
+      //   }
+      //   else{
+      //     alert("Do not contain any web")
+      //   }
+
+      // create the color zone checker using user input
+
+      let color = prompt("Enter your color zone");
+
+      document.body.style.background = color;
+      //   switch(color)
+      //   {
+      //     case 'red': document.body.style.background = 'red'
+      //     break
+      //     case 'yellow': document.body.style.background = 'yellow'
+      //     break
+      //     case 'blue': document.body.style.background = 'blue'
+      //     break
+      //     case 'green': document.body.style.background = 'green'
+      //     break
+      //     case 'back': document.body.style.background = 'back'
+      //     break
+
+      //     default : alert("You are not the part of the zone")
+      //   }
+    </script>
+  </body>
+</html>

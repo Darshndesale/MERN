@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><div></div>
+    <!-- This is the children of the body-- -->
+    <p>this is me I am software engineere</p>
+    <!-- The span tag and paragraph tags are the siblings of each othor -->
+    <span>I am brother of p</span>
+
+    <!-- How to accese the firs // last child // child node -->
+    <script>
+        console.log(document.body.firstChild)
+        console.log(document.body.lastChild)
+        console.log(document.body.childNodes)
+
+        // convert to the array (this child node is the list node type)
+        let arr = Array.from(document.body.childNodes)
+        console.log(arr)
+        // console.log(div.childNodes())
+    </script>
+</body>
+</html>

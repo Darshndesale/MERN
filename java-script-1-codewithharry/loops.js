@@ -25,7 +25,7 @@ for(let i=1; i<=num; i++)
 
 console.log("The factorial is :",fact)
 
-//for n loop
+//for in loop
 //it is based on the objects
 
 let obj = {
