@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadows</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            height: 500px;
+            width: 30%;
+            border: 2px solid black;
+            margin: 50px;
+            background-color: #6ce4bc;
+            /* x-aix y-axis color; */
+            /* box-shadow: 5px 10px  maroon; */
+
+            /* x-aix y-axis blure color; */
+            /* box-shadow: 5px 10px 50px rgb(193, 146, 47); */
+
+            /* x-aix y-axis blure spread-rad color; */
+            /* box-shadow: 5px 10px 50px 20px rgb(193, 146, 47); */
+
+            /* x-aix y-axis blure spread-rad color; */
+            /* box-shadow: 10px 50px 20px rgb(193, 146, 47), -5px -10px 10px 10px red; */
+        }
+
+        /* text shadow appy karenge */
+
+        #h{
+            /* text-shadow: 10px -5px 1px rgb(195, 57, 57); */
+
+            /* text-shadow:rgb(216, 109, 109) -5px -3px 1px ; */
+
+            /* text-shadow:5px 10px; */
+            /* //by default the shadow is black; */
+
+            text-shadow: red 10px 5px 2px,rgb(48, 216, 168) 10px -5px 2px,rgb(206, 62, 231) -10px 5px 2px,rgb(112, 227, 80) 10px -5px 2px;
+            /* text-shadow: rgb(48, 216, 168) 10px -5px 2px;
+            text-shadow: rgb(206, 62, 231) -10px 5px 2px;
+            text-shadow: rgb(112, 227, 80) 10px -5px 2px; */
+        }
+
+        img{
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+        }
+        p{
+            border: 2px solid maroon;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="logo.png" alt="">
+            
+            <h1 id="h">Darshan Desale</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit atque cum quis id optio laborum a aliquam quo eligendi at? Molestias delectus placeat maxime quod voluptatibus dolores, fugiat necessitatibus aliquid amet! Voluptatibus temporibus reiciendis harum obcaecati, facilis alias cum vel animi incidunt libero distinctio similique minima quas debitis accusantium itaque.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small web thats cover all concepts of dom</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About me</li>
+            <li>Contact us</li>
+        </ul>
+    </nav>
+
+    <div class="intro_con">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iusto earum et repellat ratione dolorem. Quos aliquam labore officia incidunt!</p>
+    </div>
+
+    <script>
+
+         // function for styles
+         const changeBodycolor = () => {
+            document.body.firstElementChild.style.background = "red"
+        }
+        // call the function
+        changeBodycolor()
+
+        let b = document.body
+        //this return the any node might be posible
+        console.log(b.firstChild)
+        // This return actually element
+        console.log("This is the first child element of "+b+" is ",b.firstElementChild)
+
+       
+    </script>
+</body>
+</html>

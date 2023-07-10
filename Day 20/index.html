@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: beige;
+            border: 1px solid brown;
+            margin: 10px;
+            padding: 20px;
+            height: 100vh;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            /* justify-content: space-evenly; */
+
+            /* justify-content: space-between; */
+            /* align-items: stretch; */
+            justify-content: start;
+
+            /* manage the space provided by wrap; */
+            align-content: flex-start;
+        }
+
+        .box{
+            /* stretch ho jayega */
+            height: 100px; 
+            width: 100px;
+            border: 1px solid black;
+            margin: 5px;
+            padding: 2px;
+        }
+        #b1{
+            background-color: aqua;
+            order: 500;
+            flex-shrink: 4;
+        }
+
+        #b2{
+            background: yellow;
+        }
+
+        #b3{
+            background: burlywood;
+            align-self: center;
+
+        }
+
+        #b4{
+            background: pink;
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="b1">box1</div>
+        <div class="box" id="b2">box2</div>
+        <div class="box" id="b3">box3</div>
+        <div class="box" id="b4">box4</div>
+    </div>
+</body>
+</html>
