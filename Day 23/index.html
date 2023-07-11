@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .zone {
+        width: 100vw;
+        height: 100vh;
+        background-color: blueviolet;
+        border: 2px solid black;
+      }
+      .box1 {
+        background-color: rgb(31, 167, 201);
+        height: 100px;
+        width: 300px;
+        border: 2px solid blue;
+        border-radius: 30px;
+        text-align: center;
+        margin: 10px;
+        position: relative;
+        animation-name: rightmove;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+
+        /* animation-timing-function: linear; */
+        /* animation-timing-function: ease-in; */
+        /* animation-timing-function:ease; */
+        /* animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+        /* animation-direction: alternate; */
+
+        /* animation-fill-mode: backwards; */
+
+        /* short hand notation */
+        animation: rightmove 5s ease-out 1s infinite alternate none running;
+      }
+
+      /* start animations */
+      @keyframes rightmove {
+        from {
+          top: 0;
+          left: 0;
+        }
+        to {
+          top: 0;
+          left: 910px;
+        }
+      }
+
+      .box2 {
+        background-color: rgb(31, 167, 201);
+        height: 100px;
+        width: 300px;
+        border: 2px solid blue;
+        border-radius: 30px;
+        text-align: center;
+        margin: 10px;
+        position: relative;
+
+        /* animation-timing-function: linear; */
+        /* animation-timing-function: ease-in; */
+        /* animation-timing-function:ease; */
+        /* animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+        /* animation-direction: alternate; */
+
+        /* animation-fill-mode: backwards; */
+
+        /* short hand notation */
+        animation: leftmove 5s ease-in 1s infinite alternate none running;
+      }
+      @keyframes leftmove {
+        from {
+          top: 400px;
+          left: 910px;
+        }
+        to {
+          top: 400px;
+          left: 0;
+        }
+      }
+
+      /* // circle bol; */
+
+      .circle {
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+        border-radius: 50%;
+        background: #d02121;
+        position: relative;
+        top: 30%;
+        left: 300px;
+
+        animation: circlemov 5s ease-in 1s infinite alternate-reverse none running;
+      }
+
+      @keyframes circlemov {
+        0% {
+            top: 3%;
+            left: 30px;
+        }
+        40% {
+            top: 55%;
+            left: 700px;
+        }
+        60% {
+            top: 5%;
+            left: 80%;
+        }
+        100%{
+            top: 2%;
+            left: 1%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animations -->
+
+    <div class="zone">
+      <div class="box1"></div>
+      <div class="circle"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>
