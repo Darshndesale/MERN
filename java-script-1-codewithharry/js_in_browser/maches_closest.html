@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="id1">I am first div <span id="sp1">span</span></div>
+    <div class="box">I am second div</div>
+
+    <script>
+        let sp1 = document.getElementById("sp1")
+        // maches element with onothor element
+
+        let id1 = document.getElementById("id1")
+        console.log(id1)
+
+        console.log(id1.matches("#id1"))
+
+        // element.closest usinf css selectors
+        // console.log(sp1.closest(".box"))
+
+        // ele.contains
+        console.log(id1.contains(sp1))
+        console.log(sp1.contains(id1))
+    </script>
+</body>
+</html>

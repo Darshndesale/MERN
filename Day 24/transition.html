@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background: beige;
+            border: 2px solid black;
+            position: relative;
+            left: 500px;
+            top: 200px;
+            /* transition-property: scale;
+            transition-duration: 1s;
+            transition-delay: 0;
+            transition-timing-function: ease-in; */
+            
+
+             /* short hand notation */
+            
+            overflow: hidden;
+        }
+        .box img{
+            height: 100%;
+            width: 100%;
+            transition: all 1s ease;
+        }
+        .box:hover img{
+           scale: 1.2;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="love.jpg" alt="">
+    </div>
+</body>
+</html>
