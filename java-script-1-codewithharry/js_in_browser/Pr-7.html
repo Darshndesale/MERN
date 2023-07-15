@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+            width: 100%;
+            min-height: 50px;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(168, 208, 208);
+        }
+        nav li{
+            list-style: none;
+            color: rgb(23, 23, 17);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <li>Home</li>
+        <li>Menu</li>
+        <li>About</li>
+        <li>contact</li>
+    </nav>
+
+    <table>
+        <td>Hello</td>
+        <td>By</td>
+        <td>Tata</td>
+    </table>
+
+    <div class="box">
+        <div>Fc</div>
+        <div>Sc</div>
+        <div>Tc</div>
+    </div>
+
+
+    <script>
+        let nav = document.getElementsByTagName('nav')[0].firstElementChild.style.color = 'red'
+        // nav_child.fistChild.style.color = 'red'
+
+        document.getElementsByClassName('box')[0].firstElementChild.style.color = 'red'
+        document.getElementsByClassName('box')[0].lastElementChild.style.color = 'red'
+
+        // use of loop
+        Array.from(document.getElementsByTagName('li')).forEach((element) => {
+            element.style.background = 'cyan'
+        });
+
+        
+    </script>
+</body>
+</html>
