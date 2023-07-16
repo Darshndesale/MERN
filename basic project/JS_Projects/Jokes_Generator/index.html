@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        background: rgb(34, 193, 195);
+        background: linear-gradient(
+          0deg,
+          rgba(34, 193, 195, 1) 61%,
+          rgba(3, 3, 2, 1) 100%
+        );
+        justify-content: center;
+        align-items: center;
+      }
+
+      .jokes-container {
+        height: 500px;
+        width: 50%;
+        /* background: #dd5151; */
+        /* border: 2px solid cyan; */
+        border-radius: 54px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: rgb(48, 216, 168) 10px -5px 2px,
+          rgb(150, 220, 63) -10px 5px 2px;
+        /* box-shadow: rgb(150, 220, 63) -10px 5px 2px; */
+        align-items: center;
+      }
+
+      #jokes {
+        height: 50%;
+        /* background: aqua; */
+        background: #e65c00; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #f9d423,
+          #e65c00
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #f9d423,
+          #e65c00
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        width: 80%;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+      }
+
+      #btn {
+        padding: 15px 20px;
+        border: black;
+        border-radius: 20px;
+        background: rgb(131, 58, 180);
+        background: linear-gradient(
+          90deg,
+          rgba(131, 58, 180, 1) 0%,
+          rgba(253, 29, 29, 1) 50%,
+          rgba(252, 176, 69, 1) 100%
+        );
+        font-size: 1em;
+        font-weight: 300;
+        transition: all 1s ease;
+      }
+
+      #btn:hover {
+        box-shadow: black 10px 5px 2px;
+        scale: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jokes-container">
+        <p id="jokes">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+          assumenda provident repellat cum quas illo nesciunt magni eligendi
+          cupiditate aspernatur.
+        </p>
+        <button id="btn">New Joke</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
