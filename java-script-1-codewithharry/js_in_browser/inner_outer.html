@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="first">I am span</span>
+    <script>
+        // It shows the directly tag name with its content;
+        console.log(document.getElementsByTagName('span')[0])
+        // It shows the element in the foem of the objects to with its objects;
+        console.dir(document.getElementsByTagName('span')[0])
+
+        console.log(document.body.firstChild.nodeName)
+        console.log(document.body.firstElementChild.nodeName)
+
+        //inner html sets the content with the html tags 
+        first.innerHTML = 'Fish'
+
+        // outer.html is used to replace the the actual element of the html to anothor like e.g
+        first.outerHTML = '<div>Hi replace by the span</div>'
+
+
+    </script>
+</body>
+</html>

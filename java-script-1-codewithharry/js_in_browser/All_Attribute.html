@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first" class="hey" data-="game" data-player="Darsh">
+        Hey I am first continer
+    </div>
+
+
+    <script>
+        let class1 = first.getAttribute('class')
+        console.log(class1)
+
+        // it returns to check the applince of the given attribute of this element
+        console.log(first.hasAttribute('id'))
+        console.log(first.hasAttribute('hidden'))
+
+        //set the attribute to the element
+        first.setAttribute('hidden','darsh')
+
+        //remove the class or any attribute from the element
+        first.removeAttribute('class')
+
+        //show all attributes
+        console.log(first.attributes)
+
+         // Data Star attributes (Make custom attribute)
+        console.log(first.dataset)
+    </script>
+</body>
+</html>
