@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser events</title>
+</head>
+<body>
+        <!-- events -->
+    <div class="container">
+        <!-- <button onclick="alert('I have click on the alert button')">Click Here</button> -->
+    <!-- solution -->
+
+    <!-- types on events; -->
+    <!-- 1> onemouse event; -->
+    <!-- <button onmouseenter="alert('container ke under mouse gaya')">hover the mouse</button> -->
+
+    <!-- 2> Events handler :-> .click karke handle karo -->
+        hellow word
+    </div>
+
+    <script>
+         let a = document.getElementsByClassName('container')[0]
+        a.onclick = () => {
+            let b = document.getElementsByClassName('container')[0]
+            b.innerHTML = "user clicke here"
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settime and setintervals</title>
+</head>
+<body>
+    
+    <script>
+        // alert('hello!')
+
+
+        // let a = setTimeout(function () {
+        //     alert('This is timeout')
+        // },2000)
+
+        // let true_false = prompt('You are stop the execution of the time oue func type (Y/N)')
+
+        // if('N' == true_false)
+        // {
+        //     clearTimeout(a)
+        // }
+
+        //Use when the user think to stop stop any contigues execution
+
+        // new set time out with arguments
+        // const sum = (a,b) =>{
+        //     console.log("Yes I am running", a+b)
+        //     return a+b
+        // }
+
+        //short hand property
+        // setTimeout(sum,1000,10,20)
+
+        //set internal run the statement in contigues manner in the gap of specifiy seconds
+        // setInterval(function() {
+        //     alert('running...')
+        // },4000)
+
+        //set interval in the argumental manner
+        let i=1
+        const table = (n) =>{
+            prod = n*i
+            console.log(prod)
+            i++
+        }
+        setInterval(table,2000,5)
+    </script>
+</body>
+</html>
