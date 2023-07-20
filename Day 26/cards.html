@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .conatainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(34, 193, 195);
+        background: linear-gradient(
+          0deg,
+          rgba(34, 193, 195, 1) 61%,
+          rgba(3, 3, 2, 1) 100%
+        );
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        height: 420px;
+        width: 250px;
+        background-color: aliceblue;
+        border-radius: 20px;
+      }
+      #card_img {
+        height: 250px;
+        width: 90%;
+        border-radius: 20px;
+        margin-top: 10px;
+        background-size: cover;
+      }
+
+      .card h3 {
+        font-size: 15px;
+        margin: 5px 10px;
+        /* text-align: center; */
+        font-weight: 900;
+      }
+
+      .card p {
+        font-size: 14px;
+        /* text-align: center; */
+        margin: 5px 10px;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- We make the cards using css properties -->
+    <div class="conatainer">
+      <div class="card">
+        <img src="qr.jpg" alt="" id="card_img" />
+        <h3 id="h3">Improve Youre front end skilles buy devloping projects</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+          blanditiis temporibus animi porro architecto veritatis!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

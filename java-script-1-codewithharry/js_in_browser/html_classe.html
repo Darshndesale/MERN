@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yellow{
+            background: rgb(203, 232, 15)000;
+            color: white;
+        }
+        .red{
+            background: rgb(177, 18, 3)000;
+            color: white;
+        }
+        .dark-black{
+            background: rgb(2, 1, 1)000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- //The classes and classlist is changes the class name directly -->
+    <div class="dark-black" id="first">
+        <span class="span">
+            I am span tag with class name first
+        </span>
+    </div>
+
+    <script>
+        //writing the classe
+        first.className = "yellow red"
+
+        //remove the class specifically
+        first.classList.remove('red')
+
+        //aapend(add) the class
+        first.classList.add('dark-black')
+
+        //toggle method repetatly true false
+        first.classList.toggle('dark-black')
+
+        //contains the class check
+        let ans = first.classList.contains('red')
+        console.log(ans)
+        // it gives me false becuse the reason of the 
+    </script>
+</body>
+</html>

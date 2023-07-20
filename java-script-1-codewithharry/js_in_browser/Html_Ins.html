@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="div">I am div uner the container</div>
+    </div>
+
+    <script>
+        //Insert the lement in dom
+        let a = document.getElementsByClassName('div')[0]
+        a.innerHTML = a.innerHTML+'<h1> Hellow word is inserted</h1>'
+        
+        //insertion methods
+        // 1>  created by element; 
+        let div = document.createElement('div')
+        //content dalo
+        div.innerHTML = '<h1> nwe div is here by append method'
+        // a.append(div);
+        a.prepend(div)
+
+        // 2> using for loop
+        
+
+        // 3> replace by anothor node;
+            a.replaceWith(div)
+
+        
+    </script>
+</body>
+</html>
