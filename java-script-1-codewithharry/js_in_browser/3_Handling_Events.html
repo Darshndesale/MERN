@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <div class="container">
+        <button id="btn">Click me</button>
+    </div>
+    <script>
+        // The fun 1 is the different event name;
+        let fun1 = function(e){
+            //It returns all properties of the event obj
+            console.log(e)
+            //It return In which html element we target
+            console.log(e.target)
+
+            // It indicates in which pos the user click
+            console.log(e.type,e.clientX,e.clientY)
+            alert('hello word1!')
+        }
+        //And fun2 also then it works diferently
+        let fun2 = function(e){
+            alert('hello word2!')
+        }
+
+
+        // let ch = prompt('Enter Which hello word is print (Hellow word1 Or Hello word2)');
+
+        btn.addEventListener('click', fun1)
+        btn.addEventListener('click', fun2)
+
+        // Remove fun1 event listener
+        // if(ch == "1")
+        // {
+        //     btn.removeEventListener('click', fun1)
+        // }
+
+
+    </script>
+</body>
+</html>

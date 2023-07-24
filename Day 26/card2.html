@@ -4,43 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>card 2</title>
-      <style>
-        * {
-          padding: 0;
-          margin: 0;
-          box-sizing: border-box;
-        }
-        .conatainer {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100vw;
-          height: 100vh;
-          background: rgb(34, 193, 195);
-          background: linear-gradient(
-            0deg,
-            rgba(34, 193, 195, 1) 61%,
-            rgba(3, 3, 2, 1) 100%
-          );
-        }
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .conatainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(34, 193, 195);
+        background: linear-gradient(
+          0deg,
+          rgba(34, 193, 195, 1) 61%,
+          rgba(3, 3, 2, 1) 100%
+        );
+      }
 
-        .card{
-            height: 430px;
-            width: 280px;
-            background-color: azure;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            border-radius: 20px;
+      .card {
+        height: 430px;
+        width: 280px;
+        background-color: azure;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 20px;
+      }
+
+      .card img {
+        height: 150px;
+        width: 100%;
+        background-size: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        /* margin-top: 0; */
+      }
+
+      .card h3 {
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .card p {
+        text-align: center;
+        margin: 0 15px;
+        font-size: 0.85rem;
+      }
+
+      .card-mid-div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* border: 1px solid black; */
+        height: 50px;
+        width: 90%;
+        background: #a5ddf3;
+        border-radius: 15px;
+      }
+
+      .logo-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .logo-price img {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-size: cover;
+      }
+
+      .logo-price p {
+        font-weight: 600;
+      }
+
+      .pay-btn {
+        background: #103783;
+        height: 50px;
+        width: 90%;
+        border-radius: 15px;
+        color: white;
+        align-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 15px black;
+        font-size: 0.85rem;
+      }
+
+      @media(max-width: 285px)
+        {
+            .card-mid-div{
+                flex-direction: column;
+            }
         }
-      </style>
+      @media(max-width: 212px)
+        {
+            .logo-price{
+                flex-direction: column;
+            }
+        }
+      
+    </style>
   </head>
   <body>
     <div class="conatainer">
-        <div class="card">
+      <div class="card">
+        <img src="image.jpg" alt="" />
+        <h3>Order Summary</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+          culpa!
+        </p>
+        <div class="card-mid-div">
+          <div class="logo-price">
+            <img src="" alt="" />
+            <p>Amount Price $99.9/year</p>
+          </div>
 
+          <div class="more-link">
+            <a href="#">Check</a>
+          </div>
         </div>
+        <div class="pay-btn">Procced to pay</div>
+
+        <p>Cancle Order</p>
+      </div>
     </div>
   </body>
 </html>
