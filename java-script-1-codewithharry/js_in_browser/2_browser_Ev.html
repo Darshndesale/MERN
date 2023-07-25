@@ -1,31 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browser events</title>
-</head>
-<body>
-        <!-- events -->
+  </head>
+  <body>
+    <!-- events -->
     <div class="container">
-        <!-- <button onclick="alert('I have click on the alert button')">Click Here</button> -->
-    <!-- solution -->
+      <!-- <button onclick="alert('I have click on the alert button')">Click Here</button> -->
+      <!-- solution -->
 
-    <!-- types on events; -->
-    <!-- 1> onemouse event; -->
-    <!-- <button onmouseenter="alert('container ke under mouse gaya')">hover the mouse</button> -->
+      <!-- types on events; -->
+      <!-- 1> onemouse event; -->
+      <!-- <button onmouseenter="alert('container ke under mouse gaya')">hover the mouse</button> -->
 
-    <!-- 2> Events handler :-> .click karke handle karo -->
-        hellow word
+      <!-- 2> Events handler :-> .click karke handle karo -->
     </div>
+    <!-- hellow word
+    <button id="btn">Time and Date</button>
+    <p id="p"></p> -->
+
+    <!-- 2> -> ans -->
+    <!-- <p>This is the content of peinting some widow content using the javascript systax</p>
+    <button onclick="print_page()">Print The page</button> -->
 
     <script>
-         let a = document.getElementsByClassName('container')[0]
-        a.onclick = () => {
-            let b = document.getElementsByClassName('container')[0]
-            b.innerHTML = "user clicke here"
-        }
-        
+      //  let a = document.getElementsByClassName('container')[0]
+      // a.onclick = () => {
+      //     let b = document.getElementsByClassName('container')[0]
+      //     b.innerHTML = "user clicke here"
+      // }
+
+      //1---->let btn = document.getElementById('btn');
+      //         btn.onclick = () =>{
+      //         p.innerHTML = Date();
+      //   }
+
+      // 2> qna (Print the page)
+      // let currwindow = document.currwindow;
+      // console.log(currwindow)
+      // function print_page(){
+      //   window.print()
+      // }
+
+      //3 Ans
+      //it find curr day
+      // let today = new Date();
+
+      // let dd = getDate();
+      // let mm = getMonth()+1;
+      // console.log(mm)
+
+      // let yyyy = today.getFullYear();
+
+      // if(dd < 10)
+      // {
+      //   dd = `0${dd}`;
+      // }
+      // if(mm < 10)
+      // {
+      //   mm = `0${mm}`;
+      // }
+
+      // let fulldate = `${dd}-${mm}-${yyyy}`
+      // console.log(fulldate)
+
+      // ------------ new approach of JS-------------
+      // var today = new Date();
+      // var dd = today.getDate();
+
+      // var mm = today.getMonth() + 1;
+      // var yyyy = today.getFullYear();
+      // if (dd < 10) {
+      //   dd = "0" + dd;
+      // }
+
+      // if (mm < 10) {
+      //   mm = "0" + mm;
+      // }
+      // today = mm + "-" + dd + "-" + yyyy;
+      // console.log(today);
+      // today = mm + "/" + dd + "/" + yyyy;
+      // console.log(today);
+      // today = dd + "-" + mm + "-" + yyyy;
+      // console.log(today);
+      // today = dd + "/" + mm + "/" + yyyy;
+      // console.log(today);
+
+
+      // 3> print the aria of triangle
+      // √[s(s-a)(s-b)(s-c)]
+      // s = (a+b+c)/2
+
+      let a = 5;
+      let b = 6;
+      let c = 7;
+
+      let s = (a+b+c)/2;
+
+      let Area_Of_Triangle = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+
+      console.log(Area_Of_Triangle)
     </script>
-</body>
+  </body>
 </html>
