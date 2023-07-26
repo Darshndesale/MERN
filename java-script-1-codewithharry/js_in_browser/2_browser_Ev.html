@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browser events</title>
   </head>
-  <body>
-    <!-- events -->
-    <div class="container">
-      <!-- <button onclick="alert('I have click on the alert button')">Click Here</button> -->
-      <!-- solution -->
+  <body> <!--- onload="roated('target')" -->
 
-      <!-- types on events; -->
-      <!-- 1> onemouse event; -->
-      <!-- <button onmouseenter="alert('container ke under mouse gaya')">hover the mouse</button> -->
+  <!-- events -->
 
-      <!-- 2> Events handler :-> .click karke handle karo -->
-    </div>
+    <!-- <button onclick="alert('I have click on the alert button')">Click Here</button> -->
+    <!-- solution -->
+
+    <!-- types on events; -->
+    <!-- 1> onemouse event; -->
+    <!-- <button onmouseenter="alert('container ke under mouse gaya')">hover the mouse</button> -->
+
+    <!-- 2> Events handler :-> .click karke handle karo -->
+
     <!-- hellow word
     <button id="btn">Time and Date</button>
     <p id="p"></p> -->
@@ -25,6 +26,8 @@
     <!-- <p>This is the content of peinting some widow content using the javascript systax</p>
     <button onclick="print_page()">Print The page</button> -->
 
+    <!-- 3 -->
+    <!-- <p id="target">W3resourse</p> -->
     <script>
       //  let a = document.getElementsByClassName('container')[0]
       // a.onclick = () => {
@@ -88,20 +91,44 @@
       // today = dd + "/" + mm + "/" + yyyy;
       // console.log(today);
 
-
       // 3> print the aria of triangle
       // √[s(s-a)(s-b)(s-c)]
       // s = (a+b+c)/2
+      // let a = 5;
+      // let b = 6;
+      // let c = 7;
 
-      let a = 5;
-      let b = 6;
-      let c = 7;
+      // let s = (a+b+c)/2;
 
-      let s = (a+b+c)/2;
+      // let Area_Of_Triangle = Math.sqrt(s*(s-a)*(s-b)*(s-c));
 
-      let Area_Of_Triangle = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+      // console.log(Area_Of_Triangle)
 
-      console.log(Area_Of_Triangle)
+      // qna 5  ---> roated the string 'W3resource'
+
+      // function roated(id) {
+      //   let element = document.getElementById(id);
+      //   let textnode = element.childNodes[0];
+      //   console.log(textnode);
+      //   let text = textnode.data;
+      //   console.log(text);
+
+      //   setInterval(function () {
+      //             // This gives the last char | This returns the string from the (0 to length-1)
+      //     text = text[text.length - 1] +        text.substring(0, text.length - 1);
+      //     //This repalce the string as modified string
+      //     textnode.data = text;
+      //   }, 100);
+      // }
+
+      // qna 6----> Whether the year is leap year
+
+      // What is leap year --> 
+      // function isleap_year(year) {
+      //   return year % 100 === 0 ? (year % 400 === 0) : (year % 4 === 0)
+      // }
+      // console.log(isleap_year(2016))
+
     </script>
   </body>
 </html>

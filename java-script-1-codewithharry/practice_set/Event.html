@@ -12,16 +12,25 @@
     <button onclick="alert('please give me the one plate Chapa')">Chapa Churi</button> -->
 
     <h1>Bookmark</h1>
-    <a href="https://google.com" target="_blank">Google.com</a>
+    <a href="https://google.com" target="_blank" id="google">Google.com</a>
     <br>
-    <a href="https://W3School.com" target="_blank">W3School.com</a>
+    <a href="https://W3School.com" target="_blank" id="w3">W3School.com</a>
     <br>
-    <a href="https://zoho.com" target="_blank">zoho.com</a>
+    <a href="https://zoho.com" target="_blank" id="zoho">zoho.com</a>
     <br>
-    <a href="https://gfg.com" target="_blank">gfg.com</a>
+    <a href="https://gfg.com" target="_blank" id="gfg">gfg.com</a>
 
+
+    
+    
     <script>
-        
+        // <!-- q 3 -->
+        // <!-- upper wala kam ka tarika in event listenre -->
+        document.getElementById("google").addEventListener('click', function() {
+                let url = "https://www.google.com"
+                window.location = "https://www.google.com"
+                win.focus();
+        })      
     
     </script>
 </body>

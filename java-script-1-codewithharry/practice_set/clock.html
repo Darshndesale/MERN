@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        height: 600px;
+        width: 100%;
+        background: #141e30; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #243b55,
+          #141e30
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #243b55,
+          #141e30
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .clock {
+        height: 300px;
+        width: 70%;
+        /* background-color: rgb(252, 252, 252); */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: -5px -5px 10px white, 5px 5px 2px rgb(2, 2, 2);
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 240px;
+        background: #141e30; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #243b55,
+          #141e30
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #243b55,
+          #141e30
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        border: 2px solid black;
+        border-radius: 20px;
+      }
+      h1 {
+        font-size: 50px;
+        color: rgb(12, 229, 211);
+      }
+
+      h2{
+        font-size: 2rem;
+        color: rgb(12, 229, 211);
+      }
+
+      /* media queries lagayenge */
+      @media (max-width: 1043px) {
+        .box {
+          width: 120px;
+        }
+      }
+      @media (max-width: 1043px) {
+        .clock {
+          width: 50%;
+        }
+      }
+      @media (max-width: 740px) {
+        .clock {
+          flex-direction: column;
+          height: 500px;
+        }
+      }
+      @media (max-width: 1427px) {
+        body {
+          background: #141e30; /* fallback for old browsers */
+          background: -webkit-linear-gradient(
+            to right,
+            #243b55,
+            #141e30
+          ); /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(
+            to right,
+            #243b55,
+            #141e30
+          ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- make the div outer -->
+    <div class="container">
+      <div class="clock">
+        <div class="hour style box">
+          <h1 id="hr"></h1>
+        </div>
+        <div class="min style box">
+          <h1 id="min"></h1>
+        </div>
+        <div class="sec style box">
+          <h1 id="sec"></h1>
+        </div>
+        <h2>AM</h2>
+      </div>
+    </div>
+
+    <script>
+      let time = new Date();
+      let hr = time.getHours();
+      let min = time.getMinutes();
+      let sec = time.getSeconds();
+
+      //   console.log(hr + "-" + min + "-" + sec);
+
+      //   setInterval(hour, 600000);
+      //   function hour() {
+      //     document.getElementById("hr").innerHTML = hr;
+      //   }
+
+      //   setInterval(minut, 60000);
+      //   function minut() {
+      //     document.getElementById("min").innerHTML = min;
+      //   }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        setInterval(showtime, 1000);
+      });
+
+      function showtime() {
+        let time = new Date();
+        let hr = time.getHours();
+        let min = time.getMinutes();
+        let sec = time.getSeconds();
+
+        if (min < 10) {
+          document.getElementById("min").innerHTML = `${"0" + min}`;
+        } else {
+          document.getElementById("min").innerHTML = min;
+        }
+
+        if (hr < 10) {
+          document.getElementById("hr").innerHTML = `${"0" + hr}`;
+        } else {
+          document.getElementById("hr").innerHTML = hr;
+        }
+
+        if (sec < 10) {
+          document.getElementById("sec").innerHTML = `${"0" + sec}`;
+        } else {
+          document.getElementById("sec").innerHTML = sec;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- problem statement -->
+<!-- create a clock seconds using javascript setinterval function
+   It is the digital clock which uI makes good -->
