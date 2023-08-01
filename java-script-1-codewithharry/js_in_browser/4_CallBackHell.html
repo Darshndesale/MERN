@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back hell</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // e.g of syncronous
+        // let a = prompt('Enter your age');
+        // let b = prompt('Enter youre name');
+        // console.log(b +" has age is "+a);
+        
+        //e.g of A - syncronous
+
+        // this is the first statemet
+        // console.log('start')
+
+        // //this function shedule for 3 seconds
+        // setTimeout(function() {
+        //     console.log('Hey I am interact with parikh sir today')
+        // },3000)
+        // console.log('end')
+
+
+        // call backs functions
+        // i > it gives argumwnts also;
+        // it handles the error also by write the code
+        // function loadscript(src,callback) {
+        //     var script = document.createElement('script')
+        //     script.src = src
+        //     script.onload = function() {
+        //         console.log("SRC: "+ src)
+        //         callback(NULL,src)
+        //     }
+
+        //     script.onerror = function() {
+        //         console.log(script)
+        //         callback(new Error('SRC got the error'))
+        //     }
+        //     document.body.appendChild(script)
+
+        // }
+        
+        // function hello(error,src) {
+        //     if(error)
+        //     {
+        //         console.log(error)
+        //     }
+        //     alert('hello' + src)
+            
+        // }
+
+        // // we can write call back function which print with the option hello or the good mornig
+        // loadscript('https://cod.jquery.com/jquery-3.4.1.slim.min.js', hello)
+
+
+        // Call Backs Problem statements
+
+        //I make the array
+        let datas = [
+            {name:"darshan",profession:"Software Engineer I"},
+            {name:"lalit",profession:"Software Engineer II"}
+        ];
+
+        function getDatas() {
+            setTimeout(() => {
+                let output = "";
+                datas.forEach((data,index) => {
+                    output += `<li>${data.name}<li>`
+                })
+    
+                document.body.innerHTML = output
+            }, 1000);
+        }
+
+        // call back samj gaya ---> ki ek ko chalne me time lag raha he utne me dusrausme data dal raha he or utni der me pehle wala uska kam kake nikal lega
+
+
+        // Dusra wala PR statement ke hisab se
+        function createdata(newdata,callback) {
+            setTimeout(() => {
+                datas.push(newdata)
+                callback();
+            }, 2000);
+        }
+        
+        getDatas() 
+        createdata({name: "bari",profession: "software tester"},getDatas)
+
+
+        // call back rel use;
+
+
+        // call back draw-backs
+        // chintu harry story of ceo and intern chitu which make the mistake;
+        
+    </script>
+</body>
+</html>

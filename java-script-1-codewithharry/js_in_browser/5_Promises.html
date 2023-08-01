@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // <!-- Promises -->
+      // <!-- Promise is the promise of code execution  -->
+
+      // <!-- create the promise; -->
+
+      // console.log('Hello')
+
+      // setTimeout(function(){
+      //     // It is a-syscronus
+      //     console.log('Hello in 2 sec 2')
+      // }, 2000);
+
+      // console.log('Hello 3')
+
+      // o/p ---> hello 1
+      //          hello 3
+      //          hello 2
+
+      // let promise = new Promise(function(resolve,reject){
+      //     alert('hello')
+      //     resolve(56)
+      // })
+
+      // console.log(promise)
+
+      // why use promises;
+      // fetch the google.com home page;
+
+      // .then and .catch methods
+
+      // syntax of prmise;
+      let p1 = new Promise(function Pr(resolve, reject) {
+        console.log("Promise is Pending....");
+        setTimeout(() => {
+          // console.log('Hi I am run by using the Promise after 5 sec')
+          resolve(true);
+        }, 5000);
+      });
+      let p2 = new Promise(function Pr(resolve, reject) {
+        console.log("Promise is Pending....");
+        setTimeout(() => {
+          console.log("Promise is rejected.");
+          // resolve(true)
+          reject(new Error("Order is rejected"));
+        }, 5000);
+      });
+
+      console.log(p1, p2);
+
+      // 1> then method;
+      p1.then((value) => {
+        // console.log(value)
+        console.log("Hi I am run by using the Promise after 5 sec");
+      });
+
+      // 2> we are catch the promise 2 result'
+      p2.catch((error) => {
+        console.log("There is error throu b the p2");
+      });
+
+      let promise = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("done");
+        }, 1000);
+    });
+    //   },(error)=>{
+    //     console.log(error)
+    //   });
+
+      promise.then(alert);
+    </script>
+  </body>
+</html>
