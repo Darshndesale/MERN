@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: linear-gradient(120deg, #2980b9, #8e44ad);
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .minform {
+        display: flex;
+        flex-direction: column;
+        /* gap: 0px; */
+        position: absolute;
+        top: 50%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        width: 50vw;
+        background: white;
+        border-radius: 10px;
+        height: 95vh;
+      }
+
+      /* h1 */
+      .heading {
+        text-align: center;
+        padding: 10px 10px;
+        border-bottom: 1px solid silver;
+        color: #2691d9;
+        background: transparent;
+        margin: 0 20px;
+      }
+
+      /* lable for email  */
+
+      /* lable for Password  */
+      form .text {
+        /* text-align: center; */
+        position: relative;
+        padding: 10px 10px;
+        /* border-bottom: 2px solid #adadad; */
+      }
+
+      /* email ka input box */
+      .input {
+        width: 96%;
+        padding: 0 5px;
+        height: 35px;
+        font-size: 16px;
+        background: none;
+        outline: none;
+        /* border-radius: 5px; */
+        border: 1px solid black;
+      }
+
+      /* .text2 input {
+        width: 96%;
+        padding: 0 5px;
+        height: 35px;
+        font-size: 16px;
+        background: none;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid black;
+      } */
+
+      .forgot a {
+        text-align: left;
+        padding: 5px 10px;
+        /* border-bottom: 1px solid silver; */
+        font-size: 15px;
+        color: #2691d9;
+        text-decoration: none;
+      }
+
+      .forgot a:hover {
+        text-decoration: underline;
+      }
+
+      /* button */
+      .button #Login {
+        text-align: center;
+        padding: 5px 10px;
+        size: 20%;
+        background: linear-gradient(120deg, #2980b9, #8e44ad);
+        width: 94%;
+        font-size: 20px;
+        border: 1px solid white;
+        /* border-radius: 10px; */
+        height: 40px;
+        cursor: pointer;
+        margin: 15px 10px;
+        text-align: center;
+      }
+
+      .button {
+        height: 50px;
+        width: 50%;
+        margin: auto;
+      }
+
+      .FormFooter {
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      .FormFooter a {
+        color: #2691d9;
+        text-decoration: none;
+      }
+
+      .FormFooter a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" class="form">
+      <div class="minform">
+        <h1 class="heading">Booking Form</h1>
+
+        <div class="text">
+          <label for="id">Id Name</label>
+          <input
+            type="text"
+            class="input"
+            name="id"
+            placeholder="Enter your id"
+          />
+        </div>
+
+        <div class="text">
+          <label for="age">Age</label>
+          <input
+            type="text"
+            class="input"
+            name="age"
+            placeholder="Enter your age"
+          />
+        </div>
+
+        <div class="text">
+          <label for="Address">Address</label>
+          <input
+            type="text"
+            class="input"
+            name="Address"
+            placeholder="Enter your address"
+          />
+        </div>
+
+        <div class="text">
+          <label for="phone">Phone</label>
+          <input
+            type="number"
+            class="input"
+            name="phone"
+            placeholder="Enter your Phone.No"
+          />
+        </div>
+
+        <div class="text">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="input"
+            name="email"
+            placeholder="Enter your email id"
+          />
+        </div>
+        <div class="text">
+          <label for="seats">No of seats</label>
+          <input
+            type="number"
+            class="input"
+            name="age"
+            step="3"
+            placeholder="Enter No.of seats"
+          />
+        </div>
+
+        <!-- <div class="forgot">
+          <p><a href="#forgot">Forgot Password?</a></p>
+        </div> -->
+
+        <div class="button">
+          <input type="submit" id="Login" />
+        </div>
+
+        
+      </div>
+    </form>
+  </body>
+</html>

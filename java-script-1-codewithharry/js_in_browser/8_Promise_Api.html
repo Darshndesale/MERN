@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve,reject) =>{
+            setTimeout(() => {
+                resolve("value 1");
+            }, 11000);
+        })
+        let p2 = new Promise((resolve,reject) =>{
+            setTimeout(() => {
+                // resolve("value 2")
+                reject(new Error("error"));
+            }, 2000);
+        })
+        let p3 = new Promise((resolve,reject) =>{
+            setTimeout(() => {
+                resolve("value 3");
+            }, 3000);
+        })
+
+        p1.then((value) =>{
+            console.log(value);
+        })
+        p2.then((value) =>{
+            console.log(value);
+        })
+        p3.then((value) =>{
+            console.log(value);
+        })
+
+        // how i accese all vlaues after resolve all promis
+        // let promis_all = Promise.all([p1,p2,p3]);
+
+        //It is used when the any one promise is return the error
+        // let promis_all = Promise.allSettled([p1,p2,p3]);
+
+        //It show the result of the promise who execute fast
+        // let promis_all = Promise.race([p1,p2,p3]);
+
+        //It show the result of the promise who execute fast but it returns the actual value without introducing any error
+        let promis_all = Promise.any([p1,p2,p3]);
+
+  
+        // resolve promises in 3 sec;
+        promis_all.then((value) =>{
+            console.log(value);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    hi
+    <script>
+      // Promise chaning
+      // let p1 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     console.log("My name is settimeout run in 2 sec");
+      //   }, 2000);
+      // });
+
+      // p1.then((value) => {
+      //   console.log(value);
+      //   let p2 = new Promise((resolve, reject) => {
+      //     resolve("Promise 2");
+      //   })
+
+      //   return p2;
+      // }).then((value) => {
+      //   console.log("Done");
+      // });
+
+      // Nesting of Promise;
+
+      // chaining of chaining
+
+      // let p2 = new Promise((resolve,reject) =>{
+      //     setTimeout(() => {
+      //         console.log("Resolve After two seconds")
+      //         resolve(56)
+      //     }, 2000);
+      // })
+
+      // p2.then((value) => {
+      //     console.log(value)
+
+      //     // chaning
+      //     let p3 = new Promise((resolve,reject) =>{
+      //         setTimeout(() => {
+      //             resolve("Promise 2")
+      //         }, 2000);
+      //         // console.log("Promise 2 is executed ")
+      //     })
+
+      //     return p3;
+      // }).then((value) => {
+      //     // It is wiat for the the return the p3 promise means the current then statement catch the o/p of the P3;
+
+      //     console.log("We are done..")
+      //     console.log(value)
+
+      //     return "Paka wala done"
+      // }).then((value) =>{
+      //     console.log(value)
+      // })
+
+      // Write the loadscript for creatting the customise promises
+      const loadscript = (src) => {
+        return new Promise((resolve, reject) => {
+          let script = document.createElement("script");
+          // script.src = 'https://www.youtube.com/iframe_api'
+          script.type = "text/javascript";
+          script.src = src;
+          document.body.appendChild(script);
+
+          script.onload = () => {
+            resolve(1);
+          };
+          script.onerror = () => {
+            reject(0);
+          };
+        });
+      };
+
+      let p1 = loadscript("https:ss//www.youtube.com");
+
+      p1.then((value) => {
+        console.log(value);
+      }).catch((error) => {
+        console.log("We are fail to load the script");
+      });
+
+
+        // Why use the promises
+        // 1> handles the error to return one by one the using the then ans catch.
+        
+    </script>
+  </body>
+</html>

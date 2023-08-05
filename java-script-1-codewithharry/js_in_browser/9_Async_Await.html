@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Async -->
+
+    <script>
+      // It returns the to ensure the it returns the promiise;
+      async function darsh() {
+        //promise 1
+        let dhulewhether = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("27 deg");
+          }, 2000);
+        });
+
+        let mumbaiwhether = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("21 deg");
+          }, 7000);
+        });
+
+        // mumbaiwhether.then((x) =>{
+        //     console.log(x);
+        // })
+        // dhulewhether.then((x) =>{
+        //     console.log(x);
+        // })
+
+        // solution for bellow comment code to accse return promise value
+        console.log("fetchng the dhule whether please wait....")
+        let dhule = await mumbaiwhether
+        console.log("fetchng Succsesfull..dhule")
+
+        console.log("fetchng the dhule whether please wait....")
+        let mumbai = await dhulewhether
+        console.log("fetchng Succsesfull..(mumbai)")
+        return [dhule,mumbai]
+
+      }
+
+    //   darsh().then((x) => {
+    //     console.log(x);
+    //   });
+
+    let promise = darsh()
+    promise.then((x)=>{
+        console.log(x)
+    })
+
+        // Note : the async function execute parallely
+    </script>
+  </body>
+</html>
