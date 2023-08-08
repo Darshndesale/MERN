@@ -1,0 +1,108 @@
+/* follow best practices such as below properties */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* create the global variables */
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --primary-text-color: #1d69a3;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondary-text-color);
+}
+
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+
+/* This is utility class */
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+/* This container is used for the content in the center positin display; */
+.container{
+    max-width: 1100px;
+    margin-inline: auto;
+    overflow: none;
+}
+
+/* style the nav; */
+nav{
+    background: #f3f3ff;
+    box-shadow: 0 0 4px #d8d8e0;
+    /* we can deside to fix it; */
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    height: 70px;
+}
+
+.main-nav{
+    justify-content: space-between;
+    padding-block: 10px;
+}
+
+.news-img img{
+    height: 60px;
+    width: 70px;
+    background-size: cover;
+    border: 1px solid brown;
+    border-radius: 40%;
+}
+
+/* design nav right side part; */
+.news-type{
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.links{
+    gap: 30px;
+}
+.links li:hover{
+    color: var(--secondary-text-color);
+}
+.links li:active{
+    color: red;
+}
+
+
+.news-type input{
+    padding: 6px;
+    /* border: 1px solid aqua; */
+    /* border-radius: 20px; */
+    background: white;
+}
+button{
+    background: #4989ff;
+    padding: 6px;
+    border-radius: 2px;
+    position: relative;
+    right: 20px;
+    width: 80px;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+
+
