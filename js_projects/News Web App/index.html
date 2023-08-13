@@ -6,31 +6,52 @@
     <title>News App</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="loadgif()">
     <!-- create the navbar -->
     <nav>
         <!-- actual navbar; -->
         <div class="main-nav flex container">
-            <div class="news-img">
+            <div class="news-img" onclick="reload()">
                 <img src="logo.jpg" alt="">
             </div>
             <div class="news-type flex">
                 <ul class="links flex">
-                    <li class="hover-items nav-items">Ipl</li>
-                    <li class="hover-items nav-items">Whether</li>
-                    <li class="hover-items nav-items">Politics</li>
+                    <li class="hover-items nav-items" id="ipl" onclick="onnavitems('ipl')">Ipl</li>
+                    <li class="hover-items nav-items" id="finance" onclick="onnavitems('finance')">Whether</li>
+                    <li class="hover-items nav-items" id="politics" onclick="onnavitems('politics')">Politics</li>
                 </ul>
                 <!-- search bar; -->
-                <input type="text" placeholder="Search News (e.g Whether)">
-                <button>Search</button>
+                <input type="text" placeholder="Search News (e.g Whether)" id="searchbox">
+                <button id="searchbutton">Search</button>
             </div>
         </div>
     </nav>
 
     <!-- create the man hero section; -->
     <main>
-
+        <div class="gif-container" class="gif-container">
+            <img src="load.gif" style="filter: invert(0);" id="gif" >
+        </div>
+        <div class="card-container container flex" id="card-container">
+            
+        </div>
     </main>
+
+    <!-- This is templet used for the api call when the to show this card on screen -->
+    <template id="templet">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/250x150" alt="newsimg" id="news-img">
+            </div>
+
+            <div class="card-content">
+                <h3 id="news-title">This is title</h2>
+                <h4 class="news-src" id="news-src">Go to direct news 26/08/2023</h3>
+                <a href="" id="web-link">Read more</a>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit accusantium error voluptatum corrupti non eaque ipsa officia, veritatis praesentium.</p>
+            </div>
+        </div>
+    </template>
 
     <script src="script.js"></script>
 </body>

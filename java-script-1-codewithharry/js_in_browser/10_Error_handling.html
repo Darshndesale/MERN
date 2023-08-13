@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling</title>
+</head>
+<body>
+    hello
+
+    <script>
+        setTimeout(() => {
+            console.log("Fetching Username and password Process is.... on Please wait....")
+        }, 1000);
+        
+        //this troughs error
+        // try {
+        //     console.log(rahuluskabhai)
+        // } catch (error) {
+        //     console.log(error)
+        // }
+
+        // 1 exception in the try and catch is the it is run for only synchonusley works
+        // e.g
+
+        try {
+            setTimeout(() => {
+                try {
+                    console.log(rahuluskabhai)
+                } catch (error) {
+                    console.log("")
+                }
+            }, 1000);
+        } catch (error) {
+            
+        }
+
+        setTimeout(() => {
+            console.log("Haking process is going .... on Please wait....")
+        }, 2000);
+        setTimeout(() => {
+            console.log("The Username and password of the kiran(Rohit) is fetched succsesfuly.... on Please wait....")
+        }, 3000);
+    </script>
+</body>
+</html>

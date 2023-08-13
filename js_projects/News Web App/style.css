@@ -54,11 +54,13 @@ nav{
     left: 0;
     right: 0;
     height: 70px;
+    
 }
 
 .main-nav{
     justify-content: space-between;
     padding-block: 10px;
+    width: 80%;
 }
 
 .news-img img{
@@ -77,6 +79,7 @@ nav{
 
 .links{
     gap: 30px;
+    cursor: pointer;
 }
 .links li:hover{
     color: var(--secondary-text-color);
@@ -85,6 +88,9 @@ nav{
     color: red;
 }
 
+.nav-items.active{
+    color: var(--accent-color);
+}
 
 .news-type input{
     padding: 6px;
@@ -102,6 +108,61 @@ button{
     color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
+}
+
+main{
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.card-container{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    align-items: center;
+}
+
+.card{
+    border: 1px solid black;
+    height: 360px;
+    width: 280px;
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: space-evenly;
+    /* background: aqua; */
+    cursor: pointer;
+    border-radius: 10px;
+    /* box-shadow: 0 0 5px black; */
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.card:hover{
+    box-shadow: 0 0 5px black;
+}
+
+.card-header img{
+    width: 280px;
+    height: 150px;
+    background-size: cover;
+}
+
+.card-content{
+    padding: 12px;
+}
+
+.news-src{
+    margin-block: 10px;
+}
+
+.gif-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-container #gif{
+    height: 200px;
+    width: 300px;
 }
 
 
