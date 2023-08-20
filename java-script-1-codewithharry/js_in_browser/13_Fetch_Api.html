@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Api</title>
+</head>
+<body>
+    hello
+    <script>
+        // fetch api sysntax
+        // https://goweather.herokuapp.com/weather/nw
+        let p = fetch("https://goweather.herokuapp.com/weather/ny")
+
+        p.then((value)=>{
+            console.log(value.status)
+            console.log(value.ok)
+            // it is asdditional info of the api or information
+            console.log(value.headers)
+            return value.json();
+        }).then((value2)=>{
+            console.log(value2);
+        })
+
+        //why 2 .then
+        // for the surerity of the fetch the data in the api then it check first .then
+        // And second .then is used to return some  vlaue
+        // Reson: ---> When sometimes the responce is more then the api introduce some error this error is show at the time of fetching data is better becuse it indicates the response or program have some error and we resolve this
+
+        // ---- responce heders -------
+
+    </script>
+</body>
+</html>
