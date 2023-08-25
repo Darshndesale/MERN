@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cokiees in js</title>
+</head>
+<body>
+    <!-- cokiees is used for storing the information -->
+    hello
+    <script>
+        // unickely identify the client;
+        // de-limited by semicolon
+        // more then one cokkee present
+
+        // how to set cookie
+        console.log(document.cookie)
+        // All are setCalles
+        document.cookie = "name = darshandesale"
+        document.cookie = "name = harrybhai"
+        document.cookie = "name = darshandesale"
+        console.log(document.cookie)
+
+        // incode URI component
+        let key = prompt("Enter youre key")
+        let value = prompt("Enter your value with key ",key)
+        document.cookie = `${encodeURIComponent(key)} = ${encodeURIComponent(value)}`
+         //Incode URI is used for the give any type of data to cook
+        // we are decode this cookies
+        console.log(document.cookie)
+
+        // cookies has some linite 4kb [ 0 ---17 ]
+    </script>
+</body>
+</html>
