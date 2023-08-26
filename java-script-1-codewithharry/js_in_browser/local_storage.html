@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+<body>
+    hi
+    <script>
+        // <!-- The local storage is store the data as the DB in server in tool of web dev and when any ne can refresh the page then it will show the data as it is; -->
+        // <!-- 1> methos SetItem :-> For storing the key-vslue pairs in DB -->
+        let key = prompt("Enter the key ")
+        let val = prompt("Enter the value")
+
+        localStorage.setItem(key,val)
+
+        // get the item from the localStorage
+        console.log(`The item inserted is : ${key} is ${localStorage.getItem(key)} and ${val} is ${localStorage.getItem(val)}`)
+        
+        //remove the key value paires
+        if(key == 'blue' || key == 'red')
+        {
+            localStorage.removeItem(key)
+        }
+
+        //cleare key
+        if(key == 0)
+        {
+            localStorage.clear()
+        }
+
+        // Get the idx key 
+        localStorage.key(0)
+
+            //key value is pairs is strings
+    </script>
+</body>
+</html>
