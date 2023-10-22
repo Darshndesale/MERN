@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog website</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .container {
+        max-width: 85vw;
+        padding: 2rem 1rem;
+        margin: 0 auto;
+        /* background: #000; */
+      }
+
+      .header_container {
+        height: 100px;
+        width: 100%;
+        /* background: #672f67; */
+        text-align: center;
+        margin-bottom: 2.8rem;
+      }
+      .title {
+        margin-bottom: 1rem;
+      }
+      .desc {
+        max-width: 50%;
+        text-align: center;
+        margin: auto;
+        color: #7b746c;
+      }
+
+      .main_content {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        /* border: 1px solid black; */
+      }
+
+    
+      @media (min-width:650px) {
+        .main_content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      }
+      @media (min-width:1080px) {
+        .main_content {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      }
+      .card_container {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(150, 148, 148);
+        border-radius: 8px;
+        background-color: rgb(246, 243, 239);
+      }
+
+      .card_img_container {
+        position: relative;
+        overflow: hidden;
+        height: 14rem;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+      }
+      .card_image {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        position: absolute;
+      }
+
+      .card_container:hover .card_image {
+        transform: scale(1.1);
+        transition-duration: 200ms;
+        transition-timing-function: ease;
+      }
+
+      .card_title_container {
+        display: flex;
+        font-size: 1rem;
+        flex-direction: column;
+        margin: 1.2rem;
+      }
+      .card_title_container a {
+        margin-bottom: 0.6rem;
+        color: black;
+      }
+
+      .card_title_container:hover a {
+        color: rgb(71, 71, 211);
+      }
+
+      .card_footer_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 1.2rem;
+      }
+
+      .author_container {
+        display: flex;
+        gap: 5px;
+      }
+
+      .author_container img {
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+
+      .author_info_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        gap: 6px;
+      }
+
+      .card_tag_container span {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 6px;
+      }
+
+      .autor_name {
+        color: rgb(167, 84, 245);
+      }
+    </style>
+  </head>
+  <body class="body_container">
+    <div class="container">
+      <header class="header_container">
+        <h1 class="title">Darshan blogs</h1>
+        <p class="desc">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nihil
+          maiores eligendi architecto placeat ratione ullam perspiciatis vel.
+          Necessitatibus, repudiandae?
+        </p>
+      </header>
+
+      <!-- main used of sysmantics  -->
+      <main class="main_content">
+        <!-- card 1 -->
+        <div class="card_container">
+          <a href="" class="card_img_container">
+            <img
+              src="https://source.unsplash.com/random/600x400?coding"
+              alt="c1"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2>New gadgets released</h2></a>
+            <p class="card_title_container_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.amet
+              consectetur adipisicing elit. Eos, suscipit.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <img
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                alt=""
+                class="avtar_img"
+                loading="lazy"
+              />
+
+              <div class="author_info_container">
+                <span class="autor_name"> John Doe </span>
+                <span> 12/10/2023 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+        <!-- card 1 -->
+        <div class="card_container">
+          <a href="" class="card_img_container">
+            <img
+              src="https://source.unsplash.com/random/600x400?coding,web devlopment"
+              alt="c1"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2>New gadgets released</h2></a>
+            <p class="card_title_container_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.amet
+              consectetur adipisicing elit. Eos, suscipit.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <img
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                alt=""
+                class="avtar_img"
+                loading="lazy"
+              />
+
+              <div class="author_info_container">
+                <span class="autor_name"> John Doe </span>
+                <span> 12/10/2023 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+        <!-- card 1 -->
+        <div class="card_container">
+          <a href="" class="card_img_container">
+            <img
+              src="https://source.unsplash.com/random/600x400?coding,google"
+              alt="c1"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2>New gadgets released</h2></a>
+            <p class="card_title_container_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.amet
+              consectetur adipisicing elit. Eos, suscipit.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <img
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                alt=""
+                class="avtar_img"
+                loading="lazy"
+              />
+
+              <div class="author_info_container">
+                <span class="autor_name"> John Doe </span>
+                <span> 12/10/2023 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+        <!-- card 1 -->
+        <div class="card_container">
+          <a href="" class="card_img_container">
+            <img
+              src="https://source.unsplash.com/random/600x400?coding,fruit,cp"
+              alt="c1"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2>New gadgets released</h2></a>
+            <p class="card_title_container_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.amet
+              consectetur adipisicing elit. Eos, suscipit.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <img
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                alt=""
+                class="avtar_img"
+                loading="lazy"
+              />
+
+              <div class="author_info_container">
+                <span class="autor_name"> John Doe </span>
+                <span> 12/10/2023 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+        <!-- card 1 -->
+        <div class="card_container">
+          <a href="" class="card_img_container">
+            <img
+              src="https://source.unsplash.com/random/600x400?coding,amazon"
+              alt="c1"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2>New gadgets released</h2></a>
+            <p class="card_title_container_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.amet
+              consectetur adipisicing elit. Eos, suscipit.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <img
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                alt=""
+                class="avtar_img"
+                loading="lazy"
+              />
+
+              <div class="author_info_container">
+                <span class="autor_name"> John Doe </span>
+                <span> 12/10/2023 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+        <!-- card 1 -->
+        <div class="card_container">
+          <a href="" class="card_img_container">
+            <img
+              src="https://source.unsplash.com/random/600x400?coding,golmansachs"
+              alt="c1"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2>New gadgets released</h2></a>
+            <p class="card_title_container_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.amet
+              consectetur adipisicing elit. Eos, suscipit.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <img
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                alt=""
+                class="avtar_img"
+                loading="lazy"
+              />
+
+              <div class="author_info_container">
+                <span class="autor_name"> John Doe </span>
+                <span> 12/10/2023 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+        <!-- card 1 -->
+        <div class="card_container">
+          <a href="" class="card_img_container">
+            <img
+              src="https://source.unsplash.com/random/600x400?coding,navi"
+              alt="c1"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2>New gadgets released</h2></a>
+            <p class="card_title_container_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.amet
+              consectetur adipisicing elit. Eos, suscipit.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <img
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                alt=""
+                class="avtar_img"
+                loading="lazy"
+              />
+
+              <div class="author_info_container">
+                <span class="autor_name"> John Doe </span>
+                <span> 12/10/2023 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+        <!-- card 1 -->
+        <div class="card_container">
+          <a href="" class="card_img_container">
+            <img
+              src="https://source.unsplash.com/random/600x400?coding,banglore"
+              alt="c1"
+              class="card_image"
+              loading="lazy"
+            />
+          </a>
+
+          <div class="card_title_container">
+            <a href="#"><h2>New gadgets released</h2></a>
+            <p class="card_title_container_desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.amet
+              consectetur adipisicing elit. Eos, suscipit.
+            </p>
+          </div>
+
+          <div class="card_footer_container">
+            <div class="author_container">
+              <img
+                src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64"
+                alt=""
+                class="avtar_img"
+                loading="lazy"
+              />
+
+              <div class="author_info_container">
+                <span class="autor_name"> John Doe </span>
+                <span> 12/10/2023 </span>
+              </div>
+            </div>
+
+            <div class="card_tag_container">
+              <span>Technology</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

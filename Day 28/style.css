@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    background: #7076cd;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    
+    /* All properties of grid and swatah grid; */
+    
+    /*  container ko grid banana he to  */
+    display: grid;
+    /* Row me gap kaise de; */
+    /* row-gap: 4px; */
+
+    /* Mix prop of line 21 and line 23 */
+    gap: 1rem;
+    /* column-gap: 5px; */
+
+    /* grid-template-rows: 1fr 1fr; The line 26 is repeated as the line no 27 following */ 
+    grid-template-rows: repeat(6,1fr);
+    /* grid-template-columns: 1fr 1fr 1fr;  same as the line 27*/
+    grid-template-columns: repeat(1,1fr);
+}
+
+.item{
+    background: #5fcb5b;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* .header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.sidebar{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.content1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+} */
+
+@media (min-width: 768px) {
+    .container{
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: repeat(3,1fr);
+    }
+    .header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
+    .footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
+    .sidebar{
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    
+    .content1{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}

@@ -1,0 +1,340 @@
+/* as a good practice */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  body {
+    background: #100928;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* style nav bar; */
+  nav {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #291f56;
+    position: sticky;
+    top: 0;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  nav ul li {
+    list-style: none;
+    margin: 0 25px;
+    cursor: pointer;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  nav ul li a:hover {
+    color: rgb(41, 56, 107);
+    font-size: 0.95rem;
+  }
+
+  .left {
+    font-size: 1.5rem;
+  }
+
+  /* style the sections */
+  .first {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    align-items: center;
+  }
+
+  .right-section {
+    /* background: red; */
+  }
+  .left-section {
+    font-size: 2.5rem;
+    font-size: 31px;
+  }
+  .first > div {
+    width: 30%;
+  }
+
+  .img img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin: 42px 30px;
+    background-size: cover;
+  }
+
+  /* This isutility class */
+  .name-color,
+  #element {
+    color: blueviolet;
+  }
+
+  /* design second section; */
+  .secondsection {
+    max-width: 80vw;
+    height: 40vh;
+    margin: auto;
+  }
+
+  #line2 {
+    border: 1;
+    background: #989cb7;
+    height: 0.2px;
+    margin: 50px 0px 5px 5px;
+  }
+  #line1 {
+    border: 0;
+    background: #4c5596;
+    height: 0.2px;
+    margin: 30px 48px;
+  }
+
+  #Skills {
+    margin: 0 120px;
+    font-size: 1.55rem;
+  }
+
+  /* //lines to show skilles */
+  .secondsection .verticle {
+    height: 30px;
+    width: 1px;
+    background: #c69d9d;
+  }
+
+  .box {
+    /* background-color: rgb(224, 113, 113); */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* // skilles dives */
+  .actual-skiles {
+    font-size: 1rem;
+    width: 10vw;
+    /* background: #000; */
+    margin-top: 10px;
+  }
+  .actual-skiles ul li {
+    list-style: none;
+    color: aqua;
+  }
+
+  .skiles-title {
+    position: relative;
+    top: -31px;
+    left: -31px;
+  }
+
+  /* Buttons for resume downloads and othor one */
+  .downloads {
+    margin-top: 10px;
+  }
+  .btn {
+    padding: 8px;
+    width: 10vw;
+    background: transparent;
+    color: white;
+    border: 2px solid #47579a;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #47579a;
+  }
+
+  /* project section; */
+  .projects {
+    /* background: #bb7e7e; */
+    height: 95vh;
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pr-cards {
+    height: 100%;
+    width: 97%;
+    /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  /* design card; */
+  .card {
+    height: 230px;
+    width: 300px;
+    background: #383161;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    border: 1px solid slateblue;
+    box-shadow: -5px 15px #1411119c;
+    transition: all 0.5s ease;
+  }
+
+  .card:hover {
+    scale: 1.1;
+  }
+  .card img {
+    height: 115px;
+    width: 100%;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .btn-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .btn-code button {
+    padding: 5px;
+    background: transparent;
+    border: none;
+    background-color: #525291;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    bottom: 4px;
+    cursor: pointer;
+  }
+  .info p {
+    font-size: 0.8rem;
+  }
+
+  /* make the section of achievements  */
+  .Achivements {
+    height: 70vh;
+    width: 100vw;
+    /* background: #794646; */
+  }
+  .container {
+    height: 70%;
+    width: 85%;
+    background: #000;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /* This is starting to create the scrollbar horizontal; */
+  .slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .boxi {
+    height: 90px;
+    width: 200px;
+    background: #881818;
+  }
+
+  .arrow-style {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+
+  .galary {
+    width: 900px;
+    height: 50vh;
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    scroll-behavior: smooth;
+  }
+
+  .galary div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+  }
+  .galary div img {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    transition: all 0.7s ease;
+  }
+  .galary div img:hover {
+    scale: 1.1;
+  }
+  .galary::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* stop the scroll bar; */
+
+  /* create footer; */
+  .footer {
+    height: 350px;
+    width: 100%;
+    background: rgb(35, 37, 67);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  #para {
+    display: flex;
+    height: 300px;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+
+  #footer-ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+  }
+
+  #footer-ul li a{
+    color: white;
+    font-size: 20px;
+  }

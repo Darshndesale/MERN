@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 3</title>
+
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .container1{
+        height: 100%;
+        width: 100%;
+        background: #928c8c;
+
+        display: grid;
+        gap: 0.4rem;
+
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+
+      }
+
+      .item{
+        height: 350px;
+        width: 600px;
+        background: #d87777;
+        border: 2px solid black;
+      }
+      .container2{
+        height: 100%;
+        /* width: 100%; */
+
+        display: grid;
+        /* display: flex; */
+        gap: 0.5rem;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+      }
+      .item2{
+            /* height: 150px;
+            width: 150px; */
+
+            background: #46528a;
+      }
+
+      .con_head{
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      .i2i3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item ">item3</div>
+        <div class="item container2">
+            <div class="item2 con_head">item1</div>
+            <div class="item2">item2</div>
+            <div class="item2">item3</div>
+        </div>
+    </div>
+</body>
+</html>
