@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Project</title>
+
+    <style>
+        .Bulb{
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .btn{
+            padding: 10px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="offBulb.jpg" alt="onbulb" class="Bulb" id="Bulb">
+    <button class="btn Bulb" id="tooglebtn">Turn on</button>
+
+    <script>
+        let Btn = document.getElementById("tooglebtn")
+        let Bulb = document.getElementById("Bulb")
+
+        Btn.addEventListener('click', toggleBulb)
+
+        function toggleBulb(e) {
+            if(Btn.textContent == "Turn on")
+            {
+                Bulb.src = "onBulb.jpg"
+                Btn.innerHTML = "Turn off"
+            }
+            else{
+                Bulb.src = "offBulb.jpg"
+                Btn.innerHTML = "Turn on"
+            }
+        }
+    </script>
+</body>
+</html>
