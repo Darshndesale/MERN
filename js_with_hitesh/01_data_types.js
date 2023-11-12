@@ -19,7 +19,6 @@ let accountState;
 // console.log(accountId);
 
 // print in table (key - value)
-
 console.table([accountEmail,accountId,accountPassword,accountCity,accountState]);
 
 /* Note : 

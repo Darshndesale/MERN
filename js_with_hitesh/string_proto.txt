@@ -1,0 +1,32 @@
+1> anchor()
+ans : 
+i> The anchor() method of String values creates a string that embeds this string in an <a> element with a name (<a name="...">str</a>).
+ii> Also this anothor way of first store string in variable and create the anchor(And pass the string as STRING) tag
+
+e.g: let str = "Hello Word"
+	 document.body.innerHTML = contentString.anchor("hello");
+
+2> big()
+i> It is method of string which is used for displayed in a big font present in <big> hello </big> of html
+e.g: let str = "Hello Word"
+	 document.body.innerHTML = contentString.big("hello");
+
+3> charCodeAt(index)
+i> It return the char code of char by using index to accese this charecter from string
+e.g : let temp = "Parot"
+      console.log(temp.charCodeAt(2))
+
+4> constructor
+i> constructor method in string is used to iittialize the variable when object cals
+
+5> endsWith()
+i> The endsWith() method of String values determines whether a string ends with the characters of this string, returning true or false as appropriate.
+ii> it has two arguments ('searchString', index)
+
+6> link()
+i> This link api is used to create the <a> tag using the dom in js
+
+7> slice()
+i> slice is used to slice the part of the like string or array 
+   to give its (start idx and end idx)
+
