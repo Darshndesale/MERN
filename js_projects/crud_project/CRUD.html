@@ -84,10 +84,18 @@
 
         <ul id="parentList" class="list-group">
           <li class="list-group-item d-flex justify-content-between">
-            Task 1
+            <p>Task 1</p>
             <div class="buttons">
-              <button id="removeBtn" class="btn btn-outline-warning">Edit</button>
-              <button class="btn btn-outline-danger" onclick="removeTask(this)">Remove</button>
+              <button
+                id="Edit_Btn"
+                class="btn btn-outline-warning"
+                onclick="edit_Task(this)"
+              >
+                Edit
+              </button>
+              <button class="btn btn-outline-danger" onclick="removeTask(this)">
+                Remove
+              </button>
             </div>
           </li>
         </ul>
@@ -144,12 +152,18 @@
       }
 
       // Remove Button jinda karenge
-      let removeBtn = document.getElementById("removeBtn")
-
-      
+      let removeBtn = document.getElementById("removeBtn");
 
       function removeTask(e) {
-          e.parentElement.parentElement.remove()
+        e.parentElement.parentElement.remove();
+      }
+
+      // Edit wala function on Edit button
+      let edit_Btn = document.getElementById("Edit_Btn");
+      function edit_Task(e) {
+        // taskInput.value = e.value
+        console.log(e.parentElement.parentElement.firstChild);
+        
       }
     </script>
   </body>

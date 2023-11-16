@@ -23,6 +23,7 @@ function checkWing(){
     ]
 
     win.forEach(e =>{
+        console.log(e[0]);
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[1]].innerText == boxtext[e[2]].innerText) && boxtext[e[0]].innerText !== ""){
             document.querySelector('.info').innerHTML = boxtext[e[0]].innerText + " Won";
             game_over = true;
@@ -64,5 +65,5 @@ Array.from(boxes).forEach(element =>{
 
 let reset = document.getElementById('reset');
 reset.addEventListener('click', ()=>{
-    location.reload()
+    location.reload('index.html')
 })
