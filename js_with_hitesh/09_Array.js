@@ -77,10 +77,10 @@ console.log(flatArray);
 [
   1, 2, 3, 4, 5,
   6, 7, 7, 8, 7,
-  
+]
 */
 
-// How to check isthis array and also when this is not arr then convert as array
+// How to check is this array and also when this is not arr then convert as array
 console.log(Array.isArray("Hitesh"));
 console.log(Array.from("Hitesh"));
 // o/p : false  * [ 'H', 'i', 't', 'e', 's', 'h' ]

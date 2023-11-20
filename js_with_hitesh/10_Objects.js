@@ -114,3 +114,38 @@ console.log(Object.keys(regularUser));
 // How to check the more about onjects USE INSPECT ELEMENT and run the js On BROWSER
 
 
+// Part 3 :--> Objects
+
+// Destructuring of objects or array values
+const courses = {
+    coursename : "javascript",
+    price : 199,
+    courseinstructor : "hitesh dada"
+}
+
+// In there is a problem when we asscese the value of any element in obj it repetatly mention that the by "."
+// courses.courseinstructor
+
+const {courseinstructor : instructor} = courses
+console.log(instructor);
+
+// o/p : hitesh dada
+
+// In react Assume the destructuring is : {company}
+
+/* API's : Apna kam dusre ke upper dal dena
+i> In the pehle the data of api is provided in the form of XML format which is very complex to accese
+ii> After that the Data is in the JSON format
+e.g : obj = {
+
+}
+iii> api is also in the array format
+*/
+
+// the json format
+
+// I perform 1> api random userme ii> copy its url : https://randomuser.me/api/ iii> paste on browser to copy content iv> using json formater convert this to TREE form
+
+
+
+
