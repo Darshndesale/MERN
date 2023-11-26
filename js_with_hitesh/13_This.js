@@ -1,4 +1,4 @@
-// The this keyword is Refer the currence context
+// The this keyword is Refer the current context
 const user = {
     username : "darshan",
     price : 999,
@@ -8,9 +8,9 @@ const user = {
     }
 }
 
-// user.welcomeMessage()
-// user.username = "Sami"
-// user.welcomeMessage()
+user.welcomeMessage()
+user.username = "Sami"
+user.welcomeMessage()
 
 // Kahani : It gives the result Empty Becuse Global ke under koi bhi value nahi he To ye run hoga browser wali js pe 
 // And rahi bat Ham sabse jyda jo object run karte he Wo He: +++ Global Window Object +++ Wo he browser me Likke click wale, Key Wale,Form Submit

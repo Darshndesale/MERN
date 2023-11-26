@@ -47,12 +47,13 @@ func1()
 // ++++++++++++++++ Interesting ++++++++++++++
 // Expressions
 
+// console.log(add(5));
 const addTwo = function add(num) {
     return num + 2
 }
 
-console.log(add(5));
-console.log(addTwo);
+console.log(addTwo(5));
+// o/p : 7 After we call the function in this way
 
 // This Trows error becuse the in js the we first simple declare the function and perform operations AND othor side the we Declare the functions anso store the result in Variable SO iT is called As the """""" Hoisting """"""
 
