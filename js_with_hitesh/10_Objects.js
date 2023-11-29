@@ -106,7 +106,7 @@ console.log(user[1].email);
 // we can convert the keys and values in object to ARRAY
 console.log((regularUser));
 
-console.log(Object.keys(regularUser));
+console.log(Object.keys(regularUser));  // It is also used to check the obj is empty or not
 // The interesting thing was the It returns the Array of keys mention as argument
 // o/p : [ 'emailid', 'fullname' ]
 // Advantage : i> To apply loops and accese the values | ii>  use in different location using working with d/b
