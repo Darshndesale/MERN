@@ -40,7 +40,7 @@ for (const [key, value] of map) {
 const obj = {
     1 : 'one',
     2 : 'two',
-    3 : 'three',
+    3 : 'three'
 }
 
 /* In objects the for of loop not work to iterate the object
