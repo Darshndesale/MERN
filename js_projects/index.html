@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple menubar sliding</title>
+    <style>
+      .body {
+        background: #1e1c1c;
+      }
+
+      .box {
+        height: 60vh;
+        width: 20vw;
+        background-color: rgb(184, 224, 211);
+      }
+
+      .smooth{
+        transition: all 0.2s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="menu">munu</button>
+    <div class="box">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>feedback</li>
+      </ul>
+      <button id="close">close</button>
+    </div>
+
+    <script>
+      let close = document.getElementById("close");
+      let menu = document.getElementById("menu");
+      let box = document.getElementsByClassName("box");
+      box = Array.from(box)
+
+      close.addEventListener('click', closeOp);
+
+      box[0].style.opacity = 0
+      menu.style.opacity = 1
+
+      function closeOp() {
+        box[0].style.opacity = 0
+        box[0].setAttribute('class','smooth','box')
+        menu.style.opacity = 1
+      }
+
+      menu.addEventListener("click", () => {
+            box[0].style.opacity = 1
+            box[0].setAttribute('class','box','smooth')
+            menu.style.opacity = 0
+      });
+
+
+
+    </script>
+  </body>
+</html>
