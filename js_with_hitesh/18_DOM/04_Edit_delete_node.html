@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The crud oprations web page  | Dom</title>
+    <style>
+        body{
+            background: #000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="laguages">
+        <li>js</li>
+        <!-- <li>Java</li>
+        <li>c++</li>
+        <li>pascle</li> -->
+    </ul>
+
+    <script>
+        // first add the list with text content : PHP
+        let parent = document.querySelector(".laguages")
+        let li = document.createElement('li')
+        // li.innerHTML = "PHP"
+
+        // parent.appendChild(li)
+        // console.log(parent);
+
+        // New question : function designed kar liya direct "li" ko array se add kar raha he
+        let laguages = ["php","c++","pascle","java","ruby","go","sharp"]
+        laguages.forEach( (lag) =>{
+            addlist(lag,parent);
+        })
+
+        // This li append function
+        // function addlist(text,parent) {
+        //     let li = document.createElement('li')
+        //     li.innerHTML = text
+        //     parent.append(li)
+        // }   
+
+        // Thoda optimize approach
+        function addlist(text,parent) {
+            let li = document.createElement('li')
+            li.appendChild(document.createTextNode(text)) //************ This is optimize
+            parent.append(li)
+        }  
+
+        // Do not fall in inner html concept it is best for small project But follow std rule as Cretae the CreateTextNode
+
+
+        // Edit the values;
+        // ** First approach
+        const secondLag = document.querySelector("li:nth-child(2)")
+        // secondLag.innerHTML = "TypeScript"
+
+        // ** Second Approach => OPTIMIZE
+        let newli = document.createElement('li')
+        let text = document.createTextNode("Typescript")
+        newli.append(text)
+        secondLag.replaceWith(newli) // it replace the exicting thing with new thing
+
+        // ** Third Approach => outer HTML lik : <li>HTML</li>
+        let firstchild = document.querySelector("li:first-child")
+        firstchild.outerHTML = "<li>Babajika Laguage</li>"
+
+        // ****** Remove **********
+        let lastChild = document.querySelector("li:last-child")
+        lastChild.remove()
+        
+    </script>
+</body>
+</html>

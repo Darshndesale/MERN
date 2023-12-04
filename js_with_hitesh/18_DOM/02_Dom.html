@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to add the elements using the dom</title>
+    <style>
+        body{
+            background: #202020;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <!-- hi this comment -->
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thusday</div>
+    </div>
+
+    <script>
+        const parent = document.querySelector(".parent")
+        console.log(parent);
+        // This gives the parent ke under kya he values div's
+
+        console.log(parent.children); // It gives The HTML Collection of childrens under the paren div
+        console.log(parent.children[3].innerHTML); // It gives The HTML Collection of childrens under the paren div
+
+        // But this is HTML collection so the for loop is iterate on childrens untill thre length (Convert karne ki koi jarurat nahi)
+        for (let i = 0; i < parent.children.length; i++) {
+            const element = parent.children[i].innerHTML;
+            console.log(element);
+        }
+
+        // sari under ki values a jayegi
+
+        // We can try to add style apply on parent childrens
+        parent.children[3].style.background = "red"; // YES
+
+        // ************** Anothor properties of parent *************
+        console.log(parent.firstElementChild.innerHTML)
+        console.log(parent.lastElementChild.innerHTML)
+
+        // ab hum child se parent ko accese karenge
+        const chid1 = document.querySelector(".day")
+        console.log(chid1.parentElement);
+
+        // reason behind is : This is concept of dom model tree to traverse the all the tree requred // ** then we directly accese the parent then after that we perform same operations by optemize
+        
+        // Also How to goes to the next sibling (kiska chahiye usese call karo)
+        console.log(chid1.nextElementSibling); // iske bhai ko de denge
+
+        // This method is provide the all node list of elemnts and every element which is fit in rule
+        console.log(parent.childNodes);
+
+        /*
+        1> It counts the all elemnts from comments , elements, enters as text, content
+        2> multiple blank lines are not render by the browser
+        3> It mentions the significance of every that write in the javascript
+        4> The child node also used in react to manupulet memory
+        */
+        
+    </script>
+</body>
+</html>

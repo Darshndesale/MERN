@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // create the div element
+        let div_ele = document.createElement('div')
+        // div_ele.setAttribute("class", "div") // first choice
+        div_ele.className = "div-he"
+        div_ele.id = Math.ceil(Math.random() * 10 + 1); // this is for fun purpose
+
+        div_ele.style.background = "red"
+        div_ele.innerHTML = "So buetifull so eleigate like a wow"
+        // Int this case we give the div all properties But the thing was this is not show on the web page 
+
+        // IMP : Note => The e.g : div.innerHTML is Override the values It goes to the location that wants to set the attribte get values and after set the value ************** But in SetAttribute method Directly set the value
+
+        // solution => attaching
+        document.body.appendChild(div_ele)
+        console.log(div_ele);
+
+
+        // Also the one thing was We create the function which is create the div element By argument (text,node)
+    </script>
+</body>
+</html>
