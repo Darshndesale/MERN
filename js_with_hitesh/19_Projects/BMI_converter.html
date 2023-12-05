@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+<body>
+    <div class="input_form">
+        <h1>BMI Calculator</h1>
+        <form>
+        <label for="height">Height in CM</label>
+        <input type="text" id="height">
+        <br>
+        <label for="weight">Weight in KG</label>
+        <input type="text" id="weight">
+        <br>
+        <button id="submit">Calculate</button>
+    </div>
+    <div class="results"></div>
+    <div class="output">
+        <h3>BMI Weight outside</h3>
+        <p>Under Weight = Less than 16.6</p>
+        <p>Normal Range = 18,6 and 24.5</p>
+        <p>Overweight Greater than 24.9</p>
+    </div>
+</form>
+
+<script>
+    let form = document.querySelector("form")
+    // to add the submite event to track the form values
+
+    // *** IMP : this usecase give you empty value after reload
+    // let height = parseInt(document.querySelector("#height").value)
+    // console.log(height);
+
+    // add event on form 
+    form.addEventListener("submit", function (e) {
+        // prevent the defualt actions on 1minut
+        e.preventDefault()
+
+        // direct elements upper mat select kar YAHA karo
+        let height = parseInt(document.querySelector("#height").value)
+        let weight = parseInt(document.querySelector("#weight").value)
+        let result = document.querySelector(".results")
+
+        if(height === "" || height < 0 || isNaN(height)) { // This NAN methos is recomended for devlopers
+            result.textContent = "Please enter valid height"
+            result.style.color = 'red'
+        } else if(weight === "" || weight < 0 || isNaN(weight)) { // This NAN methos is recomended for devlopers
+            result.textContent = "Please enter valid width"
+        }
+        else {
+            const bmi = (weight / ((height * height) / 10000)).toFixed(2)
+            if(bmi < 16.6) {
+                result.textContent = `${bmi} is under the Weight`
+            } else if (bmi === 18.6 || bmi === 24.5){
+                result.textContent = `${bmi} is under Normal range`
+            } else {
+                result.textContent = `${bmi} is under Overweight`
+            }
+        }
+    })
+</script>
+</body>
+</html>

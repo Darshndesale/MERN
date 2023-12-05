@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backround color changer</title>
+    <style>
+        body{
+            background: rgb(238, 240, 231);
+            display: flex;
+        }
+
+        .colors{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .buttons{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+        #grey{
+            background: grey;
+        }
+        #white{
+            background: white;
+        }
+        #blue{
+            background: blue;
+        }
+        #yellow{
+            background: yellow;
+        }
+
+        .colors{
+            height: 500px;
+            width: 500px;
+            /* background: #000; */
+            margin: auto;
+        }
+        .box{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="colors">
+        <h1>Color Scheme Swithcher</h1>
+        <div class="box">
+            <span class="buttons" id="grey"></span>
+            <span class="buttons" id="white"></span>
+            <span class="buttons" id="blue"></span>
+            <span class="buttons" id="yellow"></span>
+        </div>
+        <p>Try clicking on one of the colors above To change background color color of this page!</p>
+    </div>
+
+    <script>
+        let buttons = document.querySelectorAll(".buttons")
+        console.log(buttons);
+
+        let body = document.querySelector("body")
+        // console.log(body);
+
+        buttons.forEach(button => {
+            console.log(button);
+            // ab hum buttons pe event litener lagayenge
+            button.addEventListener('click', function(e) {
+                console.log(e.target.id) // ye direct box ko target karta he
+                switch (e.target.id) { // ye direct e.target.id ko dega like (mene click kiya grey pe)
+                    case 'grey':
+                        body.style.background = e.target.id // direct asign the id under color to element button box
+                        break;
+                    case 'white':
+                        body.style.background = e.target.id
+                        break;
+                    case 'blue':
+                        body.style.background = e.target.id
+                        break;
+                    case 'yellow':
+                        body.style.background = e.target.id
+                        break;
+                
+                    default:
+                        break;
+                }
+            })
+        });
+
+        // Note : also diffrent approaches are used to make this project
+        // 1> if statement approach
+        
+    </script>
+</body>
+</html>

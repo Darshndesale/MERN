@@ -30,8 +30,6 @@ console.log(num.toPrecision(9));
 
    >length 123.896500       Zero is append len - precision mention in argument
 
-
-
 */
 
 const hundread = 100000

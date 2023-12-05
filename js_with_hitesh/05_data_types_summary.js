@@ -20,7 +20,7 @@ const anotheId = Symbol('123')
 
 console.log(id === anotheId);
 
-// Its o/p is : false Becuse the sysbols indicates both to unique
+// Its o/p is : false Becuse the sysbols indicates both to unique (purpose is define uniqueness)
 
 // Or conse data type he (Reference (Non - primptive))
 /* 
