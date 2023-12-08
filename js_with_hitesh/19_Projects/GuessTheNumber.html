@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The NUmber Game</title>
+    <style>
+        body{
+            background: #252525;
+        }
+
+        .Game_Zon{
+            height: 500px;
+            width: 400px;
+            background: #4f4f4f;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box{
+            width: 50%;
+            margin: auto;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h3>Number Guessing game</h3>
+    <form class="Game_Zon">
+        <p>Try and guess a randoom number between 1 and 100 You have only 10 attempts</p>
+        <h1>Guess A Number</h1>
+        <label for="num">Enter the guess</label>
+        <input type="text" id="num" class="box">
+        <button id="btn" type="submit" class="box">Submit Guess</button>
+        <div class="result">
+            <p>Previus Guesses <span id="prev_guess"></span></p>
+            <p>Guesses Remaining : <span id="attempt">10</span></p>
+        </div>
+        <h3 id="low_high"></h3>
+    </form>
+
+    <script>
+        // generate the random number
+        let randomNum = parseInt(Math.random() * 100 + 1);
+        console.log(randomNum);
+
+        // we create thhe dom to manipulate
+        const input = document.querySelector("#num")
+        const submitBtn = document.querySelector("#btn")
+        const remAttemp = document.querySelector("#attempt")
+        const low_Or_High = document.querySelector("#low_high") 
+
+        // the variables who hep to win or fail in game
+        let attemp_cnt = 10;
+        let start = true;
+
+        // check that the game is start
+        if(start) {
+            // Mene input enter kar diya Usko hold karna hoga
+            submitBtn.addEventListener('click', (e) => {
+                e.preventDefault()
+
+                if(remAttemp.innerHTML == 0) {
+                    low_Or_High.innerHTML = "Game over"
+                    endGame()
+                    return
+                } else {
+                    let input_val = parseInt(input.value);
+                    // After that check the value is valid or not
+                    validInputCheck(input_val)
+                }
+            })
+        }
+
+        // Function of Valid Check input
+        function validInputCheck(guess) {
+            if(guess < 0 || guess > 100 || isNaN(guess))
+            {
+                alert("Please Enter valid guess")
+            }
+            else {
+                input.value = ""
+                // check valid he sirf ye check karo ki vo Win to nahi kar gaya
+                checkGuess(guess) // line number 83
+            }
+        }
+
+        // Function is used for check the guess status pass or low or high
+        function checkGuess(guess) {
+            // to usko hame kitne guess bache hue vo batana hoga
+            attemp_cnt = attemp_cnt - 1;
+            remAttemp.innerHTML = `${attemp_cnt}`
+            if(guess === randomNum) {
+                low_Or_High.innerHTML = `You win the game With remaining random count is ${attemp_cnt}`
+            } else if(guess > randomNum) {
+                low_Or_High.innerHTML = `Guess = ${guess} is Too greater than random`
+            } else {
+                low_Or_High.innerHTML = `Guess = ${guess}  is Too smaller than random`
+            } 
+        }
+
+        // To display the random number to guess
+        function endGame() {
+            alert(`Game over , Random number is ${randomNum}`)
+        }
+    </script>
+</body>
+</html>
+
+<!-- // step random number generate karna he
+        let random_no = console.log(parseInt(Math.random() * 100) + 1);
+
+        // all values ko lena he documents se
+        let user_Input = document.querySelector("#num")
+        let submit = document.querySelector("#btn")
+        let prev_guess = document.querySelector(".prev_guess")
+        let attemp = document.querySelector("#attempt")
+        let startOver = document.querySelector(".result")
+        let loworhigh = document.querySelector("#low_high")
+
+        // the storage
+        let prevGuesses = []
+        let numGuess = 0;
+        let playGame = true;
+
+        // check that this is start of game 
+        if(playGame) {
+            // jub me submit pe start krunga
+            submit.addEventListener('click', (e) =>{
+                // form he jub submit karega to vlaues ko prevent karna padega
+                e.preventDefault()
+                let guess_input = parseInt(user_Input.value);
+                console.log(guess_input);
+                // 1> validate karna padega input ko
+                validGuess(guess_input)
+            })
+        }
+
+        // The main approach start of game is start
+        // 1> validation
+        function validGuess(guess) {
+            // Check this guess is valid or not (g < 0 || g == nAN || g > 100)
+            if(guess < 0)
+            {
+                alert("please enter the guess more thann 0")
+            } else if (guess > 100) {
+                alert("please enter the guess smaller thann 100")
+            } else if(isNaN(guess)) {
+                alert("It is invalid input")
+            } else {
+                // push the guess in array
+                prevGuesses.push(guess)
+                // check that it is end of game or not
+                if(guess > 10)
+                {
+                    // display guesses with array
+                    displayGuess(guess);
+                    displayMesseage(`Game is over, Then random number was ${random_no}`)
+
+                }
+                else{
+                    // matlab guess count 10 ke under he
+                    displayGuess(guess)
+                    // isme hum decide karenge ki value < > ==
+                    CheckGuess(guess)
+
+                }
+            }
+        }
+
+        // 2> Check the guess is MATCHES with random number or not ( Low he ya High)
+        function CheckGuess(guess) {
+            //
+            if(guess === random_no){
+                displayMesseage(`You guess write Your guess ${guess}`)
+            } else if (guess > random_no) {
+                displayMesseage(`Your guess is greater than random number`)
+            } else if (guess < random_no) {
+                displayMesseage(`You guess is smaller than random number`)
+            } else {
+
+            }
+        }
+
+        function displayGuess(guess) {
+            // All the guess related work at here
+            user_Input.value = "";
+            prev_guess.textContent += `${guess}`;
+            numGuess++;
+            attemp.innerHTML = (10 - numGuess);
+        }
+
+        // 3> Display all dom related messages are display
+        function displayMesseage(message) {
+            //
+            console.log(loworhigh);
+            loworhigh.innerHTML = `${message}`;
+        }
+
+
+        // console.log(result); -->
+        

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listners in javascript</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <!--  *Imp* in js Bubbeling also -->
+        <ul id="images"> 
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick="alert('OOOOOO...')"></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+    <script>
+        /* Notes:
+        1> Events in javascript are run in sequentisl order
+        2> js is sequetial programming lagueage but use ASYNC Awit for apposite
+        3> Approaches for appling the onclick 1st APP:
+            => Direct apply in HTMML The is Of owl is Shows the example
+                Also the one thing When we enter "under the "It is not expected "" => Ans is " 'single parenthises' "
+                Do not fisible Approach : Do not inject on HTML
+        Approach 2> In js code
+        */
+
+        let owlFunc = document.getElementById("owl").onclick = function owl(e) {
+            alert("ooooOOOOOO....")
+        }
+        // This approach also has some disadvantage  It looks good But 
+        // When we apply the onclick event id Thre is some issue Or do not get more data THEN use event liteners
+
+        // 3rd Approach
+        // This addEventListener is contains the no of events like mouse , click, key etc..
+        // e.g : Trello clone
+
+
+        document.getElementById("owl").addEventListener('click', function(e){ // e => event object is very deep dive (jitna padhenge utna asan)
+            // alert("Click on owl Thirs approch")
+            console.log(e);
+            /* Which Type of events are we get : 
+                1> Browser Events : 
+                2> Environment events : like (mouse ne kaha pe click) (click kiya tub window size kya thi)
+                3> Interview Qna : 1> build the application jab jaha pe bhi like img pe body pe click kiya to Uska time muze batao 
+                                   2> Appication which when click on div usko circle bana do
+            */
+        },false)
+
+        /* Why Third parameter : True/false is defult this is false (But in case in interview Some time the application not complete without true / false)
+           
+        */
+
+        // $th approach Very old approach that is used in alery state when the browsers figths for run the programs
+
+
+        // ************* padhna kya he *************
+        /* 
+            type, timeStamp, defultPrevented( form fill ), Target, To Element , New (srcElement, CurrentTarget)
+            Interview Related : clientX, clientY, screenX, screenY  
+            Interesting : altkey, ctrkey, shiftCode, keyCode (Padhna padega IMP) => project : Word type kiya kitne speed me
+        */
+
+        // ************ Event Propogation ***********(TRUE/FALSE)
+        // In This thre is two types EventBubbeling(false) , eventCapturing (True)
+
+        // Example of Event 
+
+        // Note : IMP : We take the two scenarioes 1st is Target to the click listener to UL id = "image" and 2nd Target to the under the ul li id="owl" ko Age continue.....
+
+        // 1st
+        document.getElementById("images").addEventListener('click', function(e){
+            // console.log("click on the imagae ul");
+            e.stopPropagation()
+        },false)
+        // 2nd
+        document.getElementById("river").addEventListener('click', function(e){
+            // console.log("click on the river li");
+            e.stopPropagation() // Ye hame elemt remove hi nahi karne deta As experience of last project
+        },false)
+
+        /*
+            Kamal dekho : 
+            When I first click on images wala ul ke upper it only give this message
+            But when I click on li of river wali imgae This gets me both the messeages such as inner li && outer ul
+
+            (It is the bubble concept : gubara under se bahar ke taraf fulta he to li ul ko bhi le marega CALLEd as Event propagation)
+
+            ****** How to prevent : 
+            When we use the capturing move event (True)
+            => It gives me the output outer se inner jata he Which is depend upon the usecase Interviewer also appriciate this
+
+            ****** How to ignore The Event Propagation : ***( e.stopPropogation() ) Differently execute honge
+        */
+
+        // prevent Defult example Apply on the google link in HTML so hum uska behaviour change karenge
+
+        document.getElementById("google").addEventListener('click', function(e){
+            e.preventDefault()
+            // propagation stop kardo
+            e.stopPropagation()
+            console.log("Abhi to time he bhai gooogle jane me hard work karo");
+        },false)
+
+
+        // Understand with project : listed image pe click karte he img gayab ho
+
+        // parent accese karenge traverse karne ke liye
+        let ul = document.getElementById("images")
+        console.log(ul);
+
+        ul.addEventListener('click', function(e){
+            // bhai hame <li> ko remove karna he na ki img ko so be aware
+            console.log(e.target.tagName);
+            // check lagana padega ki 
+            if(e.target.tagName === 'IMG')
+            {
+                console.log(e.target.parentNode.remove());
+                let removeId = e.target.parentNode
+            }
+            // second approach to remove the element
+            // removeId.parentNode.removeChild(removeId)  most Used
+        },false)
+
+        // One catch : When we click on the Any li then it removes the all the ul means parent
+    </script>
+</body>
+</html>

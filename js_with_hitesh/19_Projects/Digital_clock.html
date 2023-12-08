@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital clock</title>
+    <style>
+      body {
+        height: 500px;
+        background: rgb(30, 30, 30);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+
+      .center {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      #clock_box {
+        height: 50px;
+        width: 121px;
+        border-radius: 20px;
+        background-color: rgb(226, 151, 21);
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <p>Apna Time Ayega</p>
+      <div id="clock_box"></div>
+    </div>
+
+    <script>
+        let clock = document.getElementById("clock_box")
+        console.log(clock);
+
+        // date 
+        // let date = new Date()
+        // console.log(date.toLocaleTimeString());
+        
+
+        // Set interval methos used to handle the time on user side when to show the time
+        setInterval(function (){
+            let date = new Date()
+            console.log(date.toLocaleTimeString());
+            clock.innerHTML = date.toLocaleTimeString()
+        }, 1000);
+    </script>
+  </body>
+</html>
