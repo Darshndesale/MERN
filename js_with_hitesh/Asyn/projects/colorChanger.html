@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color changer</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+</style>
+<body>
+    <h1>Click on start to blink the color And For stop click on stop still the color same constant</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        // Problem statement : when click on start then it starts to change the bg color and when stop then stop at that movement
+        /*
+            How to solve the problem
+            1> generate the random hex color code : thoda google dekho 
+            2> after that bult the function random color to generate everytime random hex color
+        */
+
+        const start = document.querySelector("#start")
+        const stop = document.querySelector("#stop")
+        let interval
+        // function for generate the random hex color
+        let randomColor = function colorGenerator() {
+            let hex = '0123456789ABCDEF'
+            let color = '#'
+            // loop lagayenge
+            for(let i=0; i<6; i++){
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+        }
+
+        
+
+        // set interval body
+        const colorInterval = function() {
+            // logic of the generate the hex color and Set on bg of the body
+            let color = randomColor();
+            console.log(color);
+            // set on body
+            document.body.style.background = color // also `#{color}`
+        }
+
+        start.addEventListener('click', (e) =>{
+            console.log('hi');
+            // Ye iss liye he ki hum jab start btn pe click kar rahe the bar bar to speed of bg color changing increases this is overide so Sefty check karna hoga
+            if(!interval){
+                interval = setInterval(colorInterval,1000)
+            }
+        })
+
+        stop.addEventListener('click', (e) =>{
+            clearInterval(interval) // This id is overide Bar bar cleare karo vapis se dalo so on Not good Flushing karni padegi
+            interval = null; // Destructuring kar diya
+        })
+    </script>
+</body>
+</html>

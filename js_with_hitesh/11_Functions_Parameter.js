@@ -52,6 +52,7 @@ console.log(calculateCartPrice(200,100,300));
 
 // o/p : [ 200,  100, 300]
 // interview Qna : when We use val1, val2 then (val1 , val2, ...num1) Then the val1 grap argu value and ... wale he rest of values
+// means isme ham jo val1 and val2 mentioned kar diya Hame Ye 2 no chodke ..num baki ki values dega naki sari samghe
 
 // pass the objects to functions
 

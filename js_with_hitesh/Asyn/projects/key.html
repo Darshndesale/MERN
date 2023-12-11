@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    .block {
+      height: 100vh;
+      width: 100%;
+      background: #343434;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .insert {
+      height: 50vh;
+      width: 50vw;
+      background: #4f4f4f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    table, th, td {
+  border:1px solid black;
+}
+  </style>
+  <body>
+    <div class="block">
+      <div class="insert">
+        <p>Press any key then it gives the infor about key</p>
+      </div>
+    </div>
+    <script>
+      let insert = document.querySelector(".insert");
+      window.addEventListener("keydown", (e) => {
+        console.log(e);
+        insert.innerHTML = `<div class="insert">
+            <table>
+  <tr>
+    <th>keycode</th>
+    <th>key</th>
+    <th>charcode</th>
+  </tr>
+  <tr>
+    <td>${e.keyCode}</td>
+    <td>${e.key}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+            </div>`;
+      });
+    </script>
+  </body>
+</html>

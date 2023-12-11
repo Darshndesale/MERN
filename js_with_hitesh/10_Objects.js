@@ -27,7 +27,7 @@ console.log(typeof myInfoObj[mysym]);
 console.log(myInfoObj.name) // bad Practice
 
 // 2nd tarika Indutry level tarika
-console.log(myInfoObj["designation"]); // Becuse the key are treat as string "designation"
+console.log(myInfoObj["designation"]); // Becuase the key are treat as string "designation"
 
 
 // Interview question : --> print sysmbol using declare in object
@@ -144,6 +144,7 @@ iii> api is also in the array format
 
 // the json format
 
+// vo hamne browser pe ek konsi to Api this uska data deka tha ki kaisa hota he
 // I perform 1> api random userme ii> copy its url : https://randomuser.me/api/ iii> paste on browser to copy content iv> using json formater convert this to TREE form
 
 

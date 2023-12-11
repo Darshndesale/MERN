@@ -51,7 +51,7 @@ for (const [key, val] of obj) {
 
 // Resolve this problem
 for (const key in obj) {
-    console.log(`${key} and thre value is ${obj[key]}`);
+    console.log(`${key} and there value is ${obj[key]}`);
 }
 
 // Arrays pe lagayenge

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set interval chalu hoga bhai</title>
+</head>
+<body>
+    <h1>Me hu time interval</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        /* set Interval : ye kehta he ki muze time do utni bar me breaks le ke execute karta rahunga
+
+        */
+        let stopInterval
+        const inerval = function(str) {
+            console.log(str, new Date().toLocaleTimeString());
+        }
+
+        // It is for when user click on start then it starts print
+        const start = document.querySelector("#start")
+        start.addEventListener('click', (e) => {
+            // let stopInterval = setInterval(inerval,1000,'hi') // chale chalo
+            stopInterval = setInterval(inerval,1000,'hi')
+        })
+
+        // jese clearetiemout he vesehi cleareInteral he
+        // it is for user is click on the stop then it stop to printing 
+        const stop = document.querySelector("#stop")
+        stop.addEventListener('click',  (e) =>{
+            clearInterval(stopInterval)
+        })  
+
+
+        // Note : Bhai thoda global variable declaration bhi hota he yad rakho
+    </script>
+</body>
+</html>

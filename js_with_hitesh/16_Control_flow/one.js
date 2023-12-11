@@ -11,7 +11,7 @@ if (2 !== "3") { // also literal false work
 // Hum yaha pe pehla example of temprature (temp > 41) (temp === 41) in if statement
 
 let bal = 100
-if(bal > 50) console.log("recharge Sucsessfuly"); // But this is unradable code
+if(bal > 50) console.log("recharge Sucsessfuly"); // But this is unreadable code
 
 // How to check 2 or moe conditions : else if ki bat chalu he
 if(bal < 50) {

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async web browser concepts</title>
+</head>
+<body>
+    <h1>Hi Time Out Async functions</h1>
+    <button id="btn">Click</button>
+
+    <script>
+        /* Set Time out :
+        => 1> It is methodit calls the api
+            2> it find through the api
+            3> It is not part of the core JS
+            4> Handler is the function call back jisko namm nahi he
+        */
+
+        setInterval(function() {
+            // console.log("darshan");
+        }, 2000);
+
+        // way 2 
+        const sayDarshan = function() {
+            console.log("darshan");
+        }
+        // call bhi karo
+        setTimeout(sayDarshan,2000)
+
+        //  It works ki muze 2 second ka time do uske bad me apko print kar dunga
+        //  One bar kam karunga bar bar nahi
+
+        // real time example : Change h1 tag text as like a wow
+        // 1> Create the function and write logic
+        const changeheading = function() {
+            document.querySelector("h1").innerText = "Like A WOW"
+        }
+
+        // 2> call the function by handler and tiem in set time out
+        const changeStop = setTimeout(changeheading,3000)
+
+        // How to stop this event
+        // clearTimeout("Reference lena padega Variable me store karo step wale ko")
+        // clearTimeout(changeStop) // But hum isko yesehi chod nahi sakte Event lagana padega
+        const stop = document.querySelector("#btn")
+        stop.addEventListener('click', (e) =>{
+            clearTimeout(changeStop)
+            console.log("stop...");
+        })
+
+    </script>
+</body>
+</html>

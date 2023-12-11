@@ -42,7 +42,7 @@ func1()
 
 // THIS is also called as """""" Closers """"""
 
-// It is  also appy for all The scope level concepts like the If () statement
+// It is  also apply for all The scope level concepts like the If () statement
 
 // ++++++++++++++++ Interesting ++++++++++++++
 // Expressions
