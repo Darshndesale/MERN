@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API request</title>
+    <style>
+        .card-body{
+            height: 400px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            background: #6a6a6a;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #image{
+            height: 50%;
+            width: 100%;
+        }
+        #followers{
+            height: 50px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Builr the card of information with image and follwors -->
+    <div class="card-body">
+            <img src="" alt="hitest bhai ki img" id="image">
+            <h3 id="followers">No</h3>
+    </div>
+
+
+
+    <script>
+        // we can not learn the about fetch() this is learn in next video This is just establish after 3 or 4 years ago
+        // How we can request from salo se
+        // learn http XML request bhejte he pehle
+
+        // it use in different frameworks Ajax related programming
+        // Thre is states in AJAX xml request
+        /*
+            value   state       Description
+        1`  0       UNSET       Client has been created Open() not calles yet
+        2`  1       OPENED      open() has been called
+        3`  2       HEADERS_    send() has been called, and headres and status are available
+                    RECEIVED
+        4`  3       LODAING     Dowloading represeTEXT holds partial data
+        5`  4       DONE        Operation is complete
+        */
+
+        // mude ki bat
+        let data;
+        // we can create obj first
+        const xmlreq =  new XMLHttpRequest()
+        // we can store data in code hard code string req URL
+        const reqUrl = 'https://api.github.com/users/hiteshchoudhary'
+        // open the connection whch send the request para(method, string)
+        xmlreq.open('GET', reqUrl)
+        console.log('here'); // work kar raha he
+        // check out the readyState
+        console.log(xmlreq.readyState); // bata na padega ki contunues track karna he
+        // change the state contnuesly modules ko monitor karti he
+        xmlreq.onreadystatechange = function () {
+            console.log(xmlreq.readyState); // 1 2 3 4 jab jab state change ho rahi he function bar bar execute ho raha he Isko hi to ASYc bolte he
+            // state detect karenge jab 4 ayega tab kuch kam karna he
+            if(xmlreq.readyState == 4) {
+                // this responce is in the form of "string"
+                console.log(this.responseText); // it gives me the xmlreq ke under ka text api
+
+                // find the followers of hitesh bhai This convert in to JSON.parse(parse convert the data in JSON) Becuse jo data a raha he wo JSON he
+                data = JSON.parse(this.responseText);
+                console.log(data.followers);
+                console.log(typeof data); // in string this reason data not accesesable abb OBJECT
+                
+                // call for function
+                hiteshInfo(data.avatar_url,data.followers); // ho gaya kam
+            }
+        }
+        // call the url
+        xmlreq.send()
+
+        // Knoeleage abot the JS
+        /*
+            1> The log is sometime part of js or not (technicaly)
+            2> also document .getElement
+            3> console.log is the devloper tool of javascript debugger Ye runtime inject karta he
+            4> 
+        */
+
+        // About V8 engine in this avalable at the git hub all imppleamention is there and in c++ and othor api's console . log impleamentation
+
+        // assignment : it solve within the current context of json format
+        function hiteshInfo(url,followers) {
+            document.getElementById("image").setAttribute("src",url)
+            document.getElementById("followers").innerHTML = `Followers : ${followers}`
+        }
+    </script>
+</body>
+</html>
