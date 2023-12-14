@@ -77,40 +77,42 @@ const promiseRes = promiseFour
     // this syntax is usefull for D/B connection
     console.log(farmername);
   })
-  .catch((error) => { // hamne error bhi define kiya he to vo bhi a raha he
+  .catch((error) => {
+    // hamne error bhi define kiya he to vo bhi a raha he
     console.log(error);
-  }).finally(() =>{
-    console.log("Finally executed ither resolve or rejected");
   })
+  .finally(() => {
+    console.log("Finally executed ither resolve or rejected");
+  });
 // NOTE : *** There is multiple case you have encounter "THEN USE FINALLY"
 // console.log(promiseRes); Triggered Exception
 
 // for readabliity ke liye new line me .then .catch chalu karo
 
 // Promise Five
-// One real fact : When the histesh sir tech in class then it solve the promise using the async awit Handle : Are promise is future chijo ko handle karne kile to he bahi 
-const promisFive = new Promise(function(resolve,reject){
-    setTimeout(function () {
-        let error = true;
-        if (!error) {
-          // error nahi he to resolve karo data obj ki form mr dikhao
-          resolve({ farmer_name: "darshan", farm_location: "deobhane", begha: 10 });
-        } else {
-          // mutlab error aya he to dikhana to padega Ese hawa me to nahi jane dena padega
-          reject("There is Database error");
-        }
-      }, 1000);
-})
+// One real fact : When the histesh sir tech in class then it solve the promise using the async awit Handle : Are promise is future chijo ko handle karne kile to he bahi
+const promisFive = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    let error = true;
+    if (!error) {
+      // error nahi he to resolve karo data obj ki form mr dikhao
+      resolve({ farmer_name: "darshan", farm_location: "deobhane", begha: 10 });
+    } else {
+      // mutlab error aya he to dikhana to padega Ese hawa me to nahi jane dena padega
+      reject("There is Database error");
+    }
+  }, 1000);
+});
 
 // Handle using the Async await
 // Create the Async and awit
-async function consumePromiseFive(){
-    try {
-      const value = await promisFive; // awit returns the Promise
-      console.log(value); // interesting output
-    } catch (error) {
-      console.log(error);
-    } // 100% handle the error
+async function consumePromiseFive() {
+  try {
+    const value = await promisFive; // awit returns the Promise
+    console.log(value); // interesting output
+  } catch (error) {
+    console.log(error);
+  } // 100% handle the error
 }
 
 // execute the async function
@@ -145,15 +147,15 @@ consumePromiseFive();
 */
 
 // *********** Isi kam ko hame Try and catch me karna he ************ IMP
-fetch('https://jsonplaceholder.typicode.com/users') // Becuse it returns the Promis .then() lagana chalega
-.then((responce) => {
-  return responce.json(); // We return it with converting json() format
-})
-.then((data) =>{
-  console.log(data);
-})
-.catch((error) => {
-  console.log(error);
-})
+fetch("https://jsonplaceholder.typicode.com/users") // Becuse it returns the Promis .then() lagana chalega
+  .then((responce) => {
+    return responce.json(); // We return it with converting json() format
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // YES it give's also same result
