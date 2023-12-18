@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz app</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        background: #1D3B36;
+        text-align: center;
+      }
+
+      .container{
+        height: 70vh;
+        background: #ce8787;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .game{
+        height: 60vmin;
+        width: 60vmin;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5vmin;
+      }
+
+      .box{
+        height: 18vmin;
+        width: 18vmin;
+        border-radius: 7px;
+        border: none;
+        font-size: 7vmin;
+        color: #9d3535;
+      }
+
+      .winnerCall{
+        height: 50%;
+        width: 100%;
+      }
+      .msg{
+        font-size: 20px;
+        color: #15c2a5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- // creating box -->
+    <div class="winnerCall">
+      <h1 class="msg">Winner</h1>
+    </div>
+    <main>
+      <h1>tic tak toe</h1>
+      <div class="container">
+        <div class="game">
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+        </div>
+      </div>
+      <!-- <button class="reset box">Reset</button> -->
+    </main>
+
+    <!-- // js; -->
+    <script>
+      let boxes = document.querySelectorAll(".box")
+      let msg = document.querySelector(".msg");
+      console.log(boxes);
+
+      // turn kiski he
+      let turn = true; // player o
+
+      // wining patterns ko store karenge
+      const patterns = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+
+      // perform actions on turn wise
+      boxes.forEach((box) => {
+        box.addEventListener('click', (e) => {
+          // console.log(e.target);
+          // e.target.innerHTML = 'O';
+          if(turn) {
+            e.target.innerHTML = 'O';
+            turn = false;
+          } else {
+            e.target.innerHTML = 'X';
+            turn = true;
+          }
+          box.disabled = true;
+           // along with them check winnigng situation
+           // function me lenge or check karenge
+           checkWinner();
+        })
+      })
+
+      // disable btn's => reason : To diables all btn's to stop finally
+      function disableBtn() {
+        for(btn of boxes) {
+          btn.disabled = true;
+        }
+      }
+
+      // winner function
+      function checkWinner() {
+          patterns.forEach((pt) => {
+            let pos1 = pt[0];
+            let pos2 = pt[1];
+            let pos3 = pt[2];
+            console.log(pos1, pos2, pos3);
+
+            // check that element in boxex
+            // console.log(boxes[pos1]);
+            // console.log(boxes[pos2]);
+            // console.log(boxes[pos3]);
+
+            // * for accese boxes
+            let box1 = boxes[pos1];
+            let box2 = boxes[pos2];
+            let box3 = boxes[pos3];
+            
+            // winning pattern kab check karenge jab 3 empty na ho : bhare honge to fayda kya
+            if(box1.innerHTML != "" && box2.innerHTML != "" && box3.innerHTML != "") {
+              if(box1.innerHTML == box2.innerHTML && box2.innerHTML == box3.innerHTML) {
+                if(turn) {
+                  console.log("Winner is X"); // jab jo jitne vala hoga vo last click me turn ho jayega deep samjho Wrong ans de raha tha
+                  msg.innerHTML = `Congratulations, Winner is X`;
+                } else {
+                  console.log("Winner is O");
+                  msg.innerHTML = `Congratulations, Winner is O`;
+                }
+                disableBtn(); // disable all the btn's Becuse one's the winner is anounce We don't allow stop playing 
+                // resetAll(); // reset all boxes as empty
+                return;
+              }
+            }
+          })
+      }
+
+
+    </script>
+  </body>
+</html>

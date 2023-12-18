@@ -10,11 +10,11 @@
 // create : promises give the callback : callback hell
 const promiseOne = new Promise(function (resolve, reject) {
   /* kya kam ho sakte he : asyn task : DB calls, creptography, network call
-            One question arrive in mind taht the what is perform actualy resolve and reject
+            One question arrive in mind that the what is perform actualy resolve and reject
             */
   setTimeout(function () {
     console.log("Async task is completed"); // when only this statement here it is not execute after complete the async task : reason Hamne .then or resolve ko kabhi connect hi nahi kiy
-    resolve();
+    resolve(); // connect .then and <--> resolve
   }, 2000);
 });
 
@@ -159,3 +159,5 @@ fetch("https://jsonplaceholder.typicode.com/users") // Becuse it returns the Pro
   });
 
 // YES it give's also same result
+
+// Note *** => But Why the promise of last call gives the first result AGLE *** VIDEO ME ***

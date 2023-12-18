@@ -63,6 +63,7 @@ const makeAllPlay = () =>{
          element.classList.add('fa-circle-play')
     });
 }
+
 Array.from(document.getElementsByClassName('song-play')).forEach(element => {
     element.addEventListener('click', (e)=>{
        

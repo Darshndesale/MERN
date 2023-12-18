@@ -108,6 +108,7 @@ const halfAndPlusOne = num
             .map( (num) => num * 10)
             .map( (num) => num+1) // In this statement it use the first map updated values in array usme + 1 karega
             .filter( (num) => num < 50) // In map only Based on True or False
+            
 
 console.log(halfAndPlusOne);
 /* After chaining Output is : 
