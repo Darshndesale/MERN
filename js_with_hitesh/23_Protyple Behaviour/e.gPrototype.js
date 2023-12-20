@@ -8,7 +8,7 @@ let myName = "darshan    "; // String.trim().length => de rahe the bhai dhyan ra
 console.log(myName.length); // when I accese the length after injecting white spaces "darshan     "
 // this give me the wrong output Becuse including the " spaces "
 
-// *** But how handle with this : kuch bolenge ki (Trim() se kar lunga) Low IQ wali bate nahi hame bg samjhana he bhai chalo...
+// *** But how handle with this : kuch bolenge ki (Trim() se kar lunga) Low IQ wali bate nahi hame bag samjhana he bhai chalo...
 // console.log(myName.trim().length); // correct o/p
 
 // Interview quetion : ki Hum (str.trim().length) ko convert karke (str.truelength()) kar sakte he kya Interesting
