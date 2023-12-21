@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind sikhenge In depth(React)</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+    <script>
+        // The bind is sikhenge Abstract hone se pehle kaise tha
+        class React {
+            // Bussness Requirement : Jaise he ye page load ho vaise hi Apka object create ho jaye react ka
+            constructor() {
+                this.library = "React";
+                this.server = "https://localhost:300";
+
+                // requirement puri kar rahe he
+                // 1st muze button ka reference lena he
+                document.querySelector("button")
+                .addEventListener('click', this.handleClick.bind(this)); // jab btn pe click hote hi muze handle click wala execute karna he => reference dena padega This se
+                // mene jab ye wala comment kiya tha tab muze kuch bhi nahi mil raha that also uncomment kiya or before bind method muze sirf Button ka reference mila na ki Or ye kam hum simply fun ko call karke bhi kar sakte he But ye hame componets ke sat kar ke dikhaya he bind ka use
+            }
+
+            // Me ek handle click method bana raha hu kyuki becuse Muze dekhna he ki kispe click ho raha he with there context info
+            handleClick() {
+                console.log("button Clicked");
+                console.log(this.server); // we can thak to check that in this which info is avilable or stack se bahar hi chali gayi pichle example ki tarah HAHA
+                // Ans => Muze this me only btn ka reference mil raha he Vo to acha he ki utna mil raha he Abhi hum pura Lene ka try karenge Using niche dekho
+                // => bind se : Ye bind karta he all the class ke context ko method ke sath jo call hui he Becuse sab this ka reference mil paye iss liye
+                // New => After appling the bind method Then All the refereces of functions variables atached with then samghe But vo kuch bhi override nahi kar rahe  
+                // => reason Kyu overide nahi hota : kyuiki Jab hum call karrahe the btn se tab btn ka reference mil nahi ki koi bhi call kar dega or refernce a gaya nahi
+                // outPut : Ab hamare pass Sub =ka reference he react libray object me samjhe
+            }
+        }
+
+        const react = new React();
+    </script>
+</body>
+</html>
