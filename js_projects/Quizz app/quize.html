@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mcq's for msbte</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /*  size for container */
+      .mcq_container {
+        height: 100vh;
+        width: 100%;
+        background: #f7cfcf;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .subject_name {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: rgb(88, 88, 240);
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+      }
+
+      .alert {
+        height: 15px;
+        width: 100%;
+        color: red;
+        font-weight: 700;
+      }
+
+      .mcq {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* background: #88aff5; */
+        gap: 70px;
+        margin-left: 10px;
+      }
+
+      ul li {
+        margin: 15px;
+        list-style: none;
+        margin-left: 0;
+      }
+
+      button {
+        height: 40px;
+        width: 30%;
+        background-color: rgb(146, 146, 245);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      #quetion {
+        height: 10vmin;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mcq_container">
+      <div class="heding">
+        <div class="subject_name">Test Name: JAVASCRIPT</div>
+        <div class="alert">You are Protected by invigilator</div>
+      </div>
+      <!-- the main div which has questions with there options -->
+      <div class="mcq">
+        <p id="qnano">Quetion 1:</p>
+        <p id="quetion">What is the full form of JS</p>
+        <ul>
+          <li>
+            <input type="radio" id="a" name="option" class="op"/>
+            <label for="a" id="ans1">Javascript</label>
+          </li>
+          <li>
+            <input type="radio" id="b" name="option" class="op"/>
+            <label for="b" id="ans2">Jasprit Japan</label>
+          </li>
+          <li>
+            <input type="radio" id="c" name="option" class="op"/>
+            <label for="c" id="ans3">Jaykumar jaise</label>
+          </li>
+          <li>
+            <input type="radio" id="d" name="option" class="op"/>
+            <label for="d" id="ans4">jai javan</label>
+          </li>
+        </ul>
+        <button id="btn">Save&Next</button>
+      </div>
+    </div>
+
+    <!-- // script likhenge -->
+    <script>
+      let question = document.querySelector("#quetion");
+      let ans1 = document.querySelector("#ans1"); 
+      let ans2 = document.querySelector("#ans2"); 
+      let ans3 = document.querySelector("#ans3"); 
+      let ans4 = document.querySelector("#ans4");
+      let score = 0; 
+
+      let button = document.querySelector("button");
+      console.log(ans1.parentElement.children);
+      let temp = Array.from(ans1.parentElement.children);
+      console.log(temp);
+      
+
+      // problem 1: create array of objects of mcq's
+      const MCQs = [
+        {
+          question: "What is JavaScript?",
+          op1: "A markup language",
+          op2: "A programming language",
+          op3: "A style sheet language",
+          op4: "An operating system",
+          answer: "A programming language"
+        },
+        {
+          question: "Which symbol is used for comments in JavaScript?",
+          op1: "//",
+          op2: "/* */",
+          op3: "#",
+          op4: "--",
+          answer: "//"
+        },
+        {
+          question: "What does DOM stand for?",
+          op1: "Document Object Model",
+          op2: "Data Object Model",
+          op3: "Digital Output Module",
+          op4: "Dynamic Output Mechanism",
+          answer: "Document Object Model"
+        },
+        {
+          question: "How do you declare a variable in JavaScript?",
+          op1: "var",
+          op2: "let",
+          op3: "const",
+          op4: "All of the above",
+          answer: "All of the above"
+        },
+        {
+          question: "What is a callback function in JavaScript?",
+          op1: "A function that is called at the beginning of the program",
+          op2: "A function passed as an argument to another function",
+          op3: "A function that calls another function",
+          op4: "A function that returns a callback",
+          answer: "A function that calls another function"
+        },
+        {
+          question: "How do you handle errors in JavaScript?",
+          op1: "Using try...catch statements",
+          op2: "Ignoring errors",
+          op3: "Throwing the errors away",
+          op4: "Using console.log()",
+          answer: "Using try...catch statements"
+        },
+        {
+          question: "What is the purpose of the 'setTimeout' function in JavaScript?",
+          op1: "To pause the execution of the program",
+          op2: "To schedule a function to run after a specified time",
+          op3: "To set the timeout of an API request",
+          op4: "To stop the execution of a function",
+          answer: "To schedule a function to run after a specified time"
+        },
+      ];
+
+      // problem 2: To track the quetion 1,2,.. n using index increament
+      
+
+      // this gives me actual radio button
+      // options.forEach((option) => {
+      //     option.addEventListener('click', (e) => {
+      //     console.log(e.target);
+      // })
+
+      // });
+
+      // we check that ki click hua he ya nahi par kispe hua he
+      // function checkAnswer() {
+      //   const rbutton = document.querySelectorAll(".op");
+      //   console.log(rbutton);
+        
+      // }
+      // checkAnswer()
+      let index = 0;
+      const rbutton = document.querySelectorAll(".op");
+      rbutton.forEach((e) => {
+        e.addEventListener('click', (e) => {
+          console.log(e.target.parentElement);
+          let qna = e.target.id;
+          if(qna == "a" && ans1.innerHTML === MCQs[index].answer) {
+            console.log(qna);
+            score++;
+          } else if(qna == "b" && ans2.innerHTML === MCQs[index].answer) {
+            console.log(qna);
+            score++;
+          } else if(qna == "c" && ans3.innerHTML === MCQs[index].answer) {
+            console.log(qna);
+            score++;
+          } else if(qna == "d" && ans4.innerHTML === MCQs[index].answer) {
+            console.log(qna);
+            score++;
+          } 
+        })  
+      })
+
+      
+      changeQuetion();
+      
+      // problem 3 : Ki button pe litener lagayenge kyuiki dura qna ala pahije
+      button.addEventListener('click', (e) => {
+        index++;
+        changeQuetion();
+      })
+
+      // function of changing qna
+      function changeQuetion() {
+        qnano.innerText = `Quetion: ${index+1}.`; 
+        question.innerText = MCQs[index].question;
+        ans1.innerText = MCQs[index].op1;
+        ans2.innerText = MCQs[index].op2;
+        ans3.innerText = MCQs[index].op3;
+        ans4.innerText = MCQs[index].op4;
+      }
+
+      // problem 4: Ki answer write he ya wrong vo dekho
+
+
+    </script>
+  </body>
+</html>
