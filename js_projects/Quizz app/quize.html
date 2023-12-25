@@ -214,12 +214,19 @@
         })  
       })
 
+      // checkanswer function
+
       
       changeQuetion();
       
       // problem 3 : Ki button pe litener lagayenge kyuiki dura qna ala pahije
       button.addEventListener('click', (e) => {
         index++;
+        if(index == MCQs.length) {
+          alert(`Your Score is ${score}`)
+        } 
+
+        // checkAnswer();
         changeQuetion();
       })
 
@@ -234,7 +241,7 @@
       }
 
       // problem 4: Ki answer write he ya wrong vo dekho
-
+      // to ek kam karna pade ga ki hum jub submit pe click karenge to Hame check karna ho ki current list me kiska radio button select he
 
     </script>
   </body>
