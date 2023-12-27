@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures</title>
+  </head>
+  <body style="background-color: #313131">
+    <script>
+      /*
+    ** We can learn the closure But first of all sikhna padega " Lexical Scoping "
+    Closures are basicaly based on the lexical Scoping 
+    // kya sikhenge
+    1> real word scenario code karenge
+    2> concept samhenge
+    3> Documentation Padhenge (Khud nahi padh nahi sakte to fayda kya)
+
+    *** Closures : A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+*/
+
+      // * Direct MDN se closure ka code paste karenge chalo..
+
+      // Step 1
+      //   function init() { // outer fun()
+      //     var name = "Mozilla"; // name is a local variable created by init
+      //     function displayName() { // inner func()
+      //       console.log(name); // use variable declared in the parent function
+      //     }
+      //     displayName(); // calling the inner func() in outer func()
+      //   }
+      //   init();
+
+      // Note ** Hum pehle theory padhi thi usko prove karenge ki Accese wala funda Chote bada aya yad
+      function Outer() {
+        let Username = "darsh";
+        // console.log("Parent le nahi sakte : ", sib1_toy);
+        function inner() {
+          let sib1_toy = "car";
+          console.log("inner me :", Username); // available he
+        }
+        function innertwo() {
+          // console.log("Sib one Toy :", sib1_toy); // no not accesable
+          console.log("inner two me :", Username); // available he
+        }
+        inner(); // YES
+        innertwo(); // YES
+      }
+      Outer();
+      console.log("To oueter", Username); // not available
+
+      /*
+      1> Both the fun() are share the memory
+      2> many function in parent function to share there memory with all inner functions That is lexicographical scope
+      3> IMP  ** The bhai bhai do not share the memory Vo nahi dega uske saman
+      4> E.g family me parents se bhai bhai mang sakte he but Bhai bhai ki nahi jamti
+      4> Also check karunga Sibling le saman parent ko de rahe he ya nahi
+      */
+
+      // ******** We can move to " Closeres " ********
+      function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+          console.log(name);
+        }
+        return displayName; // return reference of this func()
+      }
+
+      const myFunc = makeFunc(); // It store all lexical scope of displayName
+      myFunc();
+
+      /*
+        1> altho sara to same he but The in outer fun() it returns the " Reference of Inner func() "
+        2> IMP ** When we See in last E.x The inner function is execute in under the Out func()
+        => But the Think in this e.g closure is We return this as the reference
+        => Reason => ** Scoping sochni padegi Becuse Func() ka scope sirf Uske excute hone tak hi rhata he Uske bad Gayb
+                        Becuse hamne Outer function ko Bahar execute kar diya he to Fun() k scope to gayab 
+                        **This is Helps by Closure Becuse Memory Refrence Role se kar sakte he 
+        3> Prove :=> When we Execute to store the oueter fun() and store innner fun() in it to return 
+                     Hum sirf inner ka scope nahi store kar rahe Hum dekhenge ki uska Outer fun he kya to uska bhi
+
+        ** Summary : Are bhai only inner fun() scope nahi jayega " Uska all lexical Scope Jayega "
+      */
+
+    //   ******** Real Word Example ***********
+    
+    </script>
+  </body>
+</html>
