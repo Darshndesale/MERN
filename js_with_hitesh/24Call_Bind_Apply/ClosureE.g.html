@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closers</title>
+</head>
+<body>
+    <!-- // Give the 2 buttons and The requirement is that When I click on 1st btn then Background Color of body is Become " Red " And 2nd Btn Then " Yello " -->
+    <button id="red">Red</button>
+    <button id="yellow">yellow</button>
+
+    <script>
+        // To apply events using the " Onclick Function"
+        // document.getElementById("red").onclick = function() {
+        //     document.body.style.background = "red"
+        // }
+        // document.getElementById("yellow").onclick = function() {
+        //     document.body.style.background = "yellow"
+        // }
+
+        // ********** Ok ye thik he but when Hiesh bhaiya hame 500 btn and there color list bhi de rahe he
+        // But The thing is Sara repeate karna padega ka Means Hame to " DRY (Don't repeate yourself) priciple pe kam karna he"
+
+        // ******** Click handler bana lete he ********* This
+        
+        // Step 1 : TO create special function for Give the color as parameter Reusability of code
+        function ClickHandler(color) {
+            // document.body.style.background = `${color}`; 
+
+            // step 1: Create the function And return thre Lexical scope 
+            return function () {
+                document.body.style.background = `${color}`;
+            }
+        }
+
+        // Step 2  : We can apply onclick function to execute our task
+        document.getElementById("yellow").onclick = ClickHandler("yellow"); // but we not apply func() This only has pass the reference Only defination
+        // out put : It automaticaly Execute the method Clickhandler But that is not Expected
+
+        // So we apply the Lexical scoping and Closure 
+        // The all Concepts at The "ClickHandler Function"
+
+        // This is succsefully executed Dekho
+        document.getElementById("red").onclick = ClickHandler("red");
+
+
+        /* Reson to execute
+            When we learn the concept of Lexical scoping then there is only accese the parent child When return the function then also returns the lexical scoping of the Returned function
+        */
+    </script>
+</body>
+</html>
