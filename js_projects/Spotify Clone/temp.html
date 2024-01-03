@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       svg {
+        height: 20px;
+        width: 20px;
+        background: #26ff00;
+        padding: 7px;
+        border-radius: 50%;
+        position: absolute;
+        top: 60px;
+        /* property name | duration | easing function | delay */
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+
+      .play-btn:hover svg{
+        opacity: 1;
+        top: 30px;
+      }
+
+      .play-btn {
+        height: 100px;
+        width: 50px;
+        background: wheat;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="play-btn">
+      <svg width="14" height="15" viewBox="0 0 16 24">
+        <path class="svg_color" fill-rule="evenodd" d="M0 0v24l20-12z"></path>
+      </svg>
+    </div>
+  </body>
+</html>

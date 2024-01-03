@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify.Our.MySongs</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container flex bg-black">
+      <div class="left">
+        <div class="home black-color-form m-1 p-1">
+          <ul>
+            <li class="invert logo-width">
+              <img src="assets/logo.svg" alt="" />
+            </li>
+            <li class="invert logo-width">
+              <img src="assets/home.svg" alt="" />Home
+            </li>
+            <li class="invert logo-width">
+              <img src="assets/search.svg" alt="" />Search
+            </li>
+          </ul>
+        </div>
+        <div class="library black-color-form m-1 p-1">
+          <div class="heading invert flex item-center">
+            <img class="logo-width" src="assets/library.svg" alt="" />
+            <span id="library">Your Library</span>
+          </div>
+          <!-- designing song card -->
+          <div class="songs-list">
+            <ul id="uli">
+              <!-- <li>
+                <img src="assets/m.svg" alt="">
+                <p></p>
+                <img src="assets/player.svg" alt="">
+              </li> -->
+            </ul>
+          </div>
+          <div class="footer">
+            <div>
+              <a
+                href="https://www.spotify.com/us/legal/"
+                id=""
+                class=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">Legal</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/us/privacy/"
+                id=""
+                class=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">Privacy Center</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/us/legal/privacy-policy/"
+                id=""
+                class=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">Privacy Policy</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/us/legal/cookies-policy/"
+                id=""
+                class=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">Cookies</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/us/legal/privacy-policy/#s3"
+                id=""
+                class=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">About Ads</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/us/accessibility/"
+                id=""
+                class=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">Accessibility</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/us/legal/notice-at-collection/"
+                id=""
+                class=""
+                data-encore-id="textLink"
+              >
+                <span data-encore-id="type">Notice at Collection</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right black-color-form m-1">
+        <!-- create the navbar -->
+        <nav>
+          <div class="left-right-icon invert">
+            <img class="logo-width" src="assets/left.svg" alt="" />
+            <!-- <img class="logo-width" src="assets/right.svg" alt="" /> -->
+            <svg
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              class="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF logo-width"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+              ></path>
+            </svg>
+          </div>
+          <div class="buttons">
+            <button id="signup">Signin</button>
+            <button id="login">LogIn</button>
+          </div>
+        </nav>
+
+        <div class="playlists">
+          <h1>Spotify Playlists</h1>
+          <div class="card-container">
+            <div class="card black-color-form">
+              <img
+                src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d"
+                alt="abc"
+              />
+              <h2>Happly Hits!</h2>
+              <p>Hits to boost youe mood and fill you with happiness!</p>
+            </div>
+            <div class="card black-color-form">
+              <img
+                src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d"
+                alt="abc"
+              />
+              <h2>Happly Hits!</h2>
+              <p>Hits to boost youe mood and fill you with happiness!</p>
+            </div>
+          </div>
+        </div>
+        <div class="playbar">
+          <!-- I create the seek bar for indiating the song src and destination -->
+          <div class="seekbar">
+            <div class="circle"></div>
+          </div>
+          <div class="song-info">Hello song</div>
+          <div class="play-puse-btn">
+            <img id="prev" src="assets/prev.svg" alt="">
+            <img id="play" src="assets/pause.svg" alt="">
+            <img id="next" src="assets/next.svg" alt="">
+          </div>
+          <div class="time">2:00</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.left{
+    width: 20vw;
+    padding: 5px;
+}
+
+.right{
+    width: 80vw;
+}
+
+/* // list ko  */
+.home{
+    /* padding: 10px; */
+}
+
+.home ul li{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    list-style: none;
+    margin: 0 0 10px 0;
+}
+
+.heading{
+    gap: 7px;
+    padding: 5px;
+}
+
+.library{
+    font-size: 13px;
+    opacity: 0.7;
+    min-height: 78vh;
+    position: relative;
+}
+
+.footer{
+    display: flex;
+    font-size: 8px;
+    gap: 2px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    overflow-y: auto;
+    justify-content: center;
+    right: 6px;
+}
+
+.footer div a{
+    color: grey;
+}
+
+/* design right */
+.right{
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Dedign navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2f2f2f;
+    height: 70px;
+}
+
+/* left-right-icon */
+.left-right-icon{
+    display: flex;
+    gap: 29px;
+}
+
+.left-right-icon > *{
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 2px;
+    height: 20px;
+}
+
+/* design playlists and cards */
+.playlists{
+    padding: 10px;
+    color: white;
+    height: 70vh;
+    /* border: 1px solid red; */
+}
+
+.playlists h1{
+    font-size: 1.5rem;
+}
+
+.card{
+    /* border: 1px solid burlywood; */
+    width: 200px;
+    height: 250px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 7px;
+    margin: 10px;
+}
+
+.card img{
+    background-size: cover;
+    height: 60%;
+    border-radius: 5px;
+}
+
+.card p{
+    color: #a4a4a4;
+}
+
+.card-container{
+    height: 63vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+/* Design signup and login button */
+#signup{
+    background: transparent;
+    border: none;
+    color: grey;
+    font-weight: bold;
+    transition: all 0.1s ease-in;
+    /* border: 1px solid #222222; */
+    margin-right: 10px;
+}
+
+#signup:hover{
+    font-size: 0.9rem;
+    color: white;
+}
+
+#login{
+    padding: 10px;
+    background: white;
+    border: none;
+    border-radius: 20px;   
+}
+
+#login:hover{
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Design playbar at bottom of right side container */
+.playbar{
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    background-color: rgb(253, 158, 99);
+    height: 50px;
+    width: 79.2vw;
+    display: flex;
+    gap: 30%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+}
+
+#uli{
+    height: 65vh;
+    width: 17vw;
+    overflow-y: scroll;
+    /* background: #ba4444; */
+}
+
+/* to style the song list items */
+.songs-list ul li{
+    color: white;
+    list-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgb(94, 94, 94);
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+#uli li img{
+    height: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+#uli li p{
+    width: 50%;
+    height: 26px;
+    overflow: hidden;
+}
+
+/* style uli */
+
+/* style seekbar */
+.seekbar{
+    position: absolute;
+    height: 6px;
+    width: 78vw;
+    background-color: white;
+    border-radius: 15px;
+    bottom: 3px;
+}
+
+.circle{
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    transition: left 0.5s;
+}
+
+/* // To fix the position of play-puse-btn */
+.play-puse-btn{
+    position: fixed;
+}
+
