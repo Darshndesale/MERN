@@ -3,20 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.container{
+    height: 100vh;
+}
 .left{
     width: 20vw;
+    /* height: 100vh; */
     padding: 5px;
+    position: relative;
 }
 
 .right{
     width: 80vw;
+    /* height: 100vh; */
 }
 
 /* // list ko  */
-.home{
-    /* padding: 10px; */
-}
+/* .home{
+    padding: 10px;
+} */
 
 .home ul li{
     display: flex;
@@ -33,7 +38,6 @@
 
 .library{
     font-size: 13px;
-    opacity: 0.7;
     min-height: 78vh;
     position: relative;
 }
@@ -74,6 +78,8 @@ nav{
 .left-right-icon{
     display: flex;
     gap: 29px;
+    display: flex;
+    align-items: center;
 }
 
 .left-right-icon > *{
@@ -228,5 +234,90 @@ nav{
 /* // To fix the position of play-puse-btn */
 .play-puse-btn{
     position: fixed;
+}
+
+/*  Hamburget */
+.ham{
+    height: 30px;
+    border: none;
+    display: none;
+    cursor: pointer;
+}
+
+/* // design cros; */
+    .cros{
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        cursor: pointer;
+        display: none;
+    }
+
+/* // temp */
+.volume{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.time{
+    text-align: center;
+}
+
+/* Responsive of website; */
+@media (max-width: 1200px){
+    .left{
+        position: absolute;
+        z-index: 1;
+        left: -260px;
+        width: 250px;
+        transition: all .1s ease-in;
+    }
+
+    .songs-list #uli{
+        width: 220px;
+    }
+
+    .right{
+        width: 100vw;
+    }
+
+    .playbar{
+        width: 99.5vw;
+    }
+
+    .ham{
+        display: inline;
+    }
+
+    .cros{
+        display: inline;
+    }
+
+    /* // temp; */
+    .card-container{
+        justify-content: center;
+    }
+
+    /* .card{
+        width: 100vw;
+    } */
+
+    .card img{
+        background-size: cover;
+    }
+
+    .playbar{
+        width: 99.5vw;
+        height: 18vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* // or seek bar ko thoda upper */
+    .seekbar{
+        bottom: 6px;
+    }
+
 }
 

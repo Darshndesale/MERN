@@ -78,8 +78,6 @@ function showSongName() {
 }
 showSongName();
 
-// I create the seek bar ------- => Pending state
-
 
 // Play song function
 function playsong(songName) {
@@ -93,10 +91,10 @@ function playsong(songName) {
 
 
 // // Show info function => this write as time update function
-// function showInfo(songName) {
-//   document.querySelector(".song-info").innerText = songName;
-//   document.querySelector(".time").innerText = "00 : 00";
-// }
+function showInfo(songName) {
+  document.querySelector(".song-info").innerText = songName;
+  // document.querySelector(".time").innerText = "00 : 00";
+}
 
 // To play the songs using in which song of li we click
 let musics = document.querySelectorAll("#uli");
@@ -105,7 +103,7 @@ let prevSib
 let nextSib
 
 musics.forEach((li) => {
-  console.log(li);
+  // console.log(li);
   li.addEventListener("click", (e) => {
       let songName = e.target.parentElement.getAttribute("class");
       // call the play song function
@@ -114,11 +112,13 @@ musics.forEach((li) => {
       let name = e.target.parentElement.children[1].innerText;
 
       // This song info is cover in time update event
-      // showInfo(name);
+      showInfo(name);
 
       // Also store the prev and next sibling of current song  => Temp
       prevSib = e.target.parentElement.previousElementSibling;
+      console.log(prevSib);
       nextSib = e.target.parentElement.nextElementSibling;
+      console.log(nextSib);
   });
 });
 
@@ -146,30 +146,44 @@ play.addEventListener('click', () => {
 
 // To woek on previous and next btn to play this songs = > Temp
 prev.addEventListener('click', () => {
-  playsong(prevSib.getAttribute("class"));
-  changePrevSib(prevSib);
+  // This condition is for edege case of prev and next song play if avilable
+    playsong(prevSib.getAttribute("class"));
+    let name = prevSib.children[1].innerHTML;
+    showInfo(name);
+    changePrevSib();
 })
 
 next.addEventListener('click', () => {
-  playsong(nextSib.getAttribute("class"));
-  changeNextSib(nextSib);
+    playsong(nextSib.getAttribute("class"));
+    let name = nextSib.children[1].innerHTML;
+    showInfo(name);
+    changeNextSib();
 })
 
 // This is the functions for updating the Prev song and next song to TrackEvent
 function changePrevSib()
 {
+  // Reason : When click on prev then we move both prev and next to there prev siblings
   prevSib = prevSib.previousElementSibling;
+  nextSib = nextSib.previousElementSibling;
+  console.log("click prev");
   console.log(prevSib);
+  console.log(nextSib);
 }
 
 function changeNextSib() {
+  // Reason : When click on next then we move both prev and next to there next siblings
   nextSib = nextSib.nextElementSibling;
+  prevSib = prevSib.nextElementSibling;
+  console.log("click next");
+  console.log(prevSib);
+  console.log(nextSib);
 }
 
 // This is function to convert the seconds to minuts
 function secondsToMinutes(seconds) {
   if (isNaN(seconds) || seconds < 0) {
-    // return "Invalid input";
+    return "00:00";
   }
 
   const minutes = Math.floor(seconds / 60);
@@ -183,7 +197,7 @@ function secondsToMinutes(seconds) {
 
 // This for time Update event to show time of song : Jab song play hota he tab update hota he
 song.addEventListener('timeupdate', ()=>{
-  console.log(song.currentTime, " / ",  song.duration);
+  // console.log(song.currentTime, " / ",  song.duration);
   // document.querySelector(".song-info").innerText = songName;
   document.querySelector(".time").innerText = `${secondsToMinutes(song.currentTime)} / ${secondsToMinutes(song.duration)}`;
 
@@ -199,5 +213,27 @@ seekbar.addEventListener('click', (e)=>{
   song.currentTime = ((song.duration)* percent)/100;
 })
 
+
+// addevent on hamburger
+let ham = document.querySelector(".ham");
+let sidebar = document.querySelector(".left");
+let close = document.querySelector(".cros");
+
+ham.addEventListener('click', ()=>{
+  sidebar.style.left = '0';
+})
+
+// To apply event on cros
+close.addEventListener('click', ()=>{
+  sidebar.style.left = "-260px";
+})
+
+
+// to find out the range of sound volume to set that 
+let range = document.querySelector("#range").addEventListener('change', (e)=>{
+  console.log(e.target.value/100);
+  song.volume = parseInt(e.target.value)/100;
+  // The volume of sound is between 0 , 0.2, ..., 1
+})
 
 
