@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Mobile Listing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- To create NavBar first -->
+    <nav>
+        <div class="nav-content">
+            <img src="logo.png" alt="logo">
+            <div class="search">
+                <input type="text" placeholder="Search your mobile choice.">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- // there is 2 parts left part for filter and rigth part for Product listing -->
+        <div class="left">
+            <form action="" id="form">
+                <label for="price">Price</label>
+                <div class="price-div">
+                    <select name="price" id="price">
+                        <option value="MIN">MIN</option>
+                        <option value="10000">10000</option>
+                        <option value="15000">15000</option>
+                        <option value="20000">20000</option>
+                        <option value="30000">30000</option>
+                    </select>
+                    <p>to</p>
+                    <select name="price" id="price2">
+                        <option value="MIN">MAX</option>
+                        <option value="10000">10000</option>
+                        <option value="15000">15000</option>
+                        <option value="20000">20000</option>
+                        <option value="30000+">30000+</option>
+                    </select>
+                </div>
+                <div id="line"></div>
+
+                <label for="brand">Brand</label>
+                <select name="brand" id="brand">
+                    <option value="choose">Choose</option>
+                    <option value="SAMSUNG">SAMSUNG</option>
+                    <option value="vivo">vivo</option>
+                    <option value="OPPO">OPPO</option>
+                    <option value="POCO">POCO</option>
+                    <option value="realme">realme</option>
+                </select>
+                <div id="line"></div>
+
+                <label for="ram">RAM</label>
+                <select name="ram" id="ram">
+                    <option value="Choose">Choose</option>
+                    <option value="2 GB">2 GB</option>
+                    <option value="3 GB">3 GB</option>
+                    <option value="4 GB">4 GB</option>
+                    <option value="8 GB">8 GB</option>
+                </select>
+                <div id="line"></div>
+
+                <button name="submite" id="btn">Apply</button>
+            </form>
+        </div>
+        <div class="right">
+            <!-- card to show the mobile information -->
+            <!-- <div class="card">
+                <div class="phone-img">
+                    <img src="readme1.webp" alt="">
+                </div>
+                <div class="info">
+                    <h3 id="name">README</h3>
+                    <ul id="config">
+                        <li id="ram">12GB</li>
+                        <li id="size">6.2inch</li>
+                        <li id="camera">50mpx</li>
+                        <li id="Batery">5000HZ</li>
+                    </ul>
+                </div>
+                <div class="mob-price">
+                    <h3>$29,000</h3>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

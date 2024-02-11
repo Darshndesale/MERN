@@ -50,8 +50,8 @@ const books = [
 ]
 
 // Accese the books data where genre === 'History'
-const userBooks = books.filter( (bk) => bk.genre === 'History' )
-
+const userBooks = books.filter( (bk) => bk.genre === 'History' && bk.version === 0.1)
+console.log("hi");
 console.log(userBooks);
 
 /* output : 
@@ -81,7 +81,6 @@ for (const item of userBooks) {
     if(item.publishDate > 2000) {
         // console.log(`This book name as ${item.name} has purchasedate is ${item.publishDate}`);
     }
-
 }
 /* output : This book name as no name has purchasedate is 2001
 This book name as Kangaru has purchasedate is 2032

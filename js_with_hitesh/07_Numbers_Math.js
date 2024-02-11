@@ -17,7 +17,7 @@ console.log(ph_bal);
 console.log(acc_Bal.toString().length);
 
 //It is most useful for the ecomerse application to custer who not see the more precisions values in application
-console.log(acc_Bal.toFixed(2));
+console.log(acc_Bal.toFixed(2)); // e.x : 1000.00 <- 2 zero
 
 // presision bohot interesting he
 let num = 123.8965

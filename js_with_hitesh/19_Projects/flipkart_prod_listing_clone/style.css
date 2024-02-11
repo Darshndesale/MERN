@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 50px;
+    width: 100vw;
+    background: #1957f5;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-content{
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.nav-content img{
+    height: 18px;
+    width: 66px;
+}
+
+.search input{
+    height: 30px;
+    width: 28vw;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background: #bee4ff;
+    display: flex;
+    /* justify-content: space-around; */
+    margin: 5px 5px;
+    gap: 6px;
+}
+
+.left{
+    height: 95%;
+    width: 20%;
+    background: #ba7070;
+}
+.right{
+    height: 95%;
+    width: 78%;
+    background: #7eca95;
+}
+
+form{
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.price-div{
+    display: flex;
+    justify-content: space-around;
+}
+#line{
+    height: 0.4px;
+    background: #bde6f3;
+}
+
+/* // design the card */
+
+.card{
+    height: 200px;
+    width: 100%;
+    margin: auto;
+    background: #ffffff;
+    padding: 10px;
+    display: flex;
+    border: 1px solid #8bfff3;
+    /* justify-content: space-around; */
+}
+
+.phone-img{
+    height: 250px;
+    width: 150px;
+    display: flex;
+    justify-content: end;
+}
+
+.phone-img img{
+    height: 70%;
+    width: 70%;
+    background-size: cover;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* align-items: center; */
+    width: 60%;
+    padding-left: 15px;
+}
+
+ul li{
+    list-style: none;
+}
+

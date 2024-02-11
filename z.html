@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Effect on Canvas</title>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+    canvas {
+        display: block;
+        background-color: #000;
+    }
+</style>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<svg preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+          
+</svg>
+<script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    console.log(ctx);
+    const width = canvas.width = window.innerWidth;
+    const height = canvas.height = window.innerHeight;
+
+    // Function to draw lines
+    function drawLines() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < 100; i++) {
+            const x1 = Math.random() * width;
+            const y1 = Math.random() * height;
+            const x2 = Math.random() * width;
+            const y2 = Math.random() * height;
+            const length = Math.random() > 0.5 ? 20 : 40; // Randomly choose line length
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x1 + length, y1 + length);
+            ctx.strokeStyle = '#FFF'; // Default line color
+            ctx.stroke();
+        }
+    }
+
+    // Initial drawing
+    drawLines();
+
+    // Change line color on hover
+    canvas.addEventListener('mousemove', function (event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        const imageData = ctx.getImageData(x, y, 1, 1);
+        const pixel = imageData.data;
+        if (pixel[0] === 255 && pixel[1] === 255 && pixel[2] === 255) {
+            // Change line color to lighter shade when hovering over white lines
+            ctx.strokeStyle = '#BBB';
+            drawLines();
+        } else {
+            // Reset line color to default
+            ctx.strokeStyle = '#FFF';
+            drawLines();
+        }
+    });
+</script>
+</body>
+</html>

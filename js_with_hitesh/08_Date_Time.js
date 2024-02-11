@@ -28,7 +28,7 @@ console.log(typeof myDate);
 
 // Khudse create karenge Date ko
 
-let myCreatedDate = new Date(2023,10,12)
+let myCreatedDate = new Date(2023,10,12) // year,month,day
 console.log(myCreatedDate.toDateString());
 
 
@@ -42,6 +42,6 @@ console.log(myCreatedDate.getTime());
 // It has many methods to give the date as time in second ,minut
 
 // We can perform deeply dive into date using there get methods
-let newDate = new Date()
+let newDate = new Date();
 console.log(newDate.getFullYear());
 

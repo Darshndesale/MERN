@@ -264,6 +264,33 @@ nav{
     text-align: center;
 }
 
+/* Hover effect btn; */
+.simg {
+    height: 40px;
+    width: 40px;
+    background: #26ff00;
+    padding: 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: 60px;
+    /* property name | duration | easing function | delay */
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+
+
+  .play-btn {
+    height: 110px;
+    width: 50px;
+    left: 139px;
+    top: 79px;
+    position: relative;
+  }
+  .play-btn:hover .simg{
+    opacity: 1;
+    top: 30px;
+  }
+
 /* Responsive of website; */
 @media (max-width: 1200px){
     .left{
