@@ -38,6 +38,7 @@ We are using nodejs , the js complier hide in the web browser
                 6> object -> let age = 18
                              console.log(typeof age);
 */
+
 // let age = 18
 // console.log(typeof BigInt);
 

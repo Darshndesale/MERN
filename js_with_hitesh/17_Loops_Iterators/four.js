@@ -5,7 +5,7 @@ const myArr = ["java", "c++", "python", "ruby"]
 // try..
 const item = myArr.forEach( (item) => {
     console.log(item);
-    return item
+    return item;
 })
 console.log(item);
 
