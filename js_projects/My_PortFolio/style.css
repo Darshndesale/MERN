@@ -92,9 +92,40 @@
 
   /* design second section; */
   .secondsection {
+    /* background-color: white; */
     max-width: 80vw;
-    height: 40vh;
+    height: 60vh;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row_style{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 18%;
+    /* background: #1d8dd7; */
+  }
+  .col_style1{
+    color: rgb(220, 220, 220);
+    width: 50%;
+  }
+  .col_style2{
+      width: 50%;
+      color: #555353;
+  }
+
+  
+
+  .first_col {
+    background-color: red;
+    width: 50%;
+  }
+
+  .second_col{
+    background: #000;
+    width: 50%;
   }
 
   #line2 {
